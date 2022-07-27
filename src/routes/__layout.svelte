@@ -7,9 +7,23 @@
 	import Sidebar from 'src/components/sidebar.svelte';
 </script>
 
-<Header />
-<PostGrid />
-<slot />
-<Sidebar />
-<RelatedPosts />
+<header>
+	<Header />
+</header>
+<main>
+	<PostGrid />
+	<slot />
+	<Sidebar />
+	<RelatedPosts />
+</main>
 <Footer />
+
+<style>
+	main {
+		padding: 0 2em;
+	}
+
+	header {
+		padding: 0 2em;
+	}
+</style>

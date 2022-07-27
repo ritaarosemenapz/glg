@@ -6,7 +6,7 @@
 	}
 </script>
 
-<header>
+<div class="container">
 	<div class="top-container">
 		<div>
 			<h1 class="site-title"><a href="/">GirlsLikeGirls</a></h1>
@@ -29,28 +29,37 @@
 			</ul>
 		</nav>
 	{/if}
-</header>
-<div />
+</div>
 
 <style>
-	header {
-		position: fixed;
-		padding-bottom: 2em;
-		background-color: rgba(255, 255, 255, 0.968);
+	.container {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		background-color: white;
 		width: 100%;
 	}
 
 	.top-container {
 		display: flex;
+		flex-flow: row wrap;
 		align-items: baseline;
 		justify-content: space-between;
-		padding: 0 1em;
+	}
+
+	@media screen and (max-width: 700px) {
+		.container {
+			flex-direction: column;
+		}
 	}
 
 	nav {
 		display: flex;
+		z-index: 1;
 		justify-content: flex-end;
 		flex-direction: column-reverse;
+		background-color: white;
+		width: 100%;
 	}
 
 	li {
@@ -60,6 +69,10 @@
 		padding: 0.5em 0;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
 			'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+
+	ul {
+		padding: 0;
 	}
 
 	li a {
@@ -87,9 +100,5 @@
 	.menu-toggle {
 		font-family: 'DrukWide';
 		cursor: pointer;
-	}
-
-	div {
-		height: 100px;
 	}
 </style>

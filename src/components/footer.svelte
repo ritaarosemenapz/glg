@@ -16,7 +16,6 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 0 3em;
 		font-family: 'DrukWide';
 		font-size: 0.8rem;
 		text-transform: uppercase;
