@@ -33,7 +33,9 @@
 				<span>
 					<h2><a href={post.path}>{post.meta.title}</a></h2>
 					<p class="author">By {post.meta.author}</p>
-					<p>{post.meta.category}</p>
+					<a href={`${post.meta.category.toLowerCase()}`}>
+						<p>{post.meta.category}</p>
+					</a>
 					<p>{post.meta.date}</p>
 				</span>
 			</article>
@@ -42,6 +44,7 @@
 	<DailyQuote />
 </main>
 
+<!-- TODO Dynamic routes for categories -->
 <style>
 	section {
 		display: grid;

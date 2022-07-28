@@ -1,58 +1,79 @@
 <script context="module">
 	import RelatedPosts from 'src/components/relatedPosts.svelte';
-	export const load = async ({ params, fetch }) => {
-		const currentCategory = params.path;
-		const response = await fetch('./api/posts.json');
-		const posts = await response.json();
 
-		const matchingPosts = posts.filter((post) => post.meta.path.includes(currentCategory));
+	const allPost = import.meta.glob('./*.md');
+	let body = [];
+	for (let path in allPost) {
+		body.push(
+			allPost[path]().then(({ metadata }) => {
+				return {
+					path,
+					meta: metadata
+				};
+			})
+		);
+	}
+
+	export const load = async ({ params }) => {
+		const posts = await Promise.all(body);
+		const category = params.category;
+
+		const filteredPost = posts.filter((post) => {
+			return post.meta.category.includes(category);
+		});
 
 		return {
 			props: {
-				posts: matchingPosts
+				filteredPost,
+				category
 			}
 		};
 	};
 </script>
 
 <script>
-	export let post;
+	export let filteredPost;
+	export let category;
 	let colors = ['#f4ded9', '#ffcbdd', '#0cf574', '#edff7e', '#29e7cd'];
 	let random = Math.floor(Math.random() * colors.length);
 	let color = colors[random];
 </script>
 
 <svelte:head>
-	<title>{post.meta.title} | GLG</title>
+	<title>{category.toUpperCase()} | GLG</title>
 </svelte:head>
 
-<article class="post">
-	<div class="wrapper" style="background-color: {color}">
-		<div class="post-header">
-			<div>
-				<p class="category-badge" style="color: {colors[random + 1]}">{post.meta.category}</p>
-				<h1>{post.meta.title}</h1>
-				<p>{post.meta.summary}</p>
-				<div class="col-2">
-					<p>By {post.meta.author}</p>
+{#each filteredPost as post}
+	<article class="post">
+		<div class="wrapper" style="background-color: {color}">
+			<div class="post-header">
+				<div>
+					<p class="category-badge" style="color: {colors[random + 1]}">
+						{post.meta.category}
+					</p>
+					<h1>{post.meta.title}</h1>
+					<p>{post.meta.summary}</p>
+					<div class="col-2">
+						<p>By {post.meta.author}</p>
+					</div>
+					<p>{post.meta.date}</p>
 				</div>
-				<p>{post.meta.date}</p>
+				<img src={post.meta.cover} alt="" />
 			</div>
-			<img src={post.meta.cover} alt="" />
 		</div>
-	</div>
-	<section class="post-body">
-		<RelatedPosts />
-	</section>
-	<aside>
+		<section class="post-body">
+			<RelatedPosts />
+		</section>
+		<!-- <aside>
 		<div class="author-info">
 			<img class="author-pic" src={post.authorPic} alt={post.author} />
 			<p>{post.authorBio}</p>
 		</div>
 		<h3>BUY ME A COFFEE...</h3>
 		<RelatedPosts />
-	</aside>
-</article>
+	</aside> -->
+	</article>
+{/each}
 
 <style>
 	.category-badge {

@@ -22,7 +22,11 @@ const config = {
 	preprocess: [
 		preprocess(), 
 		mdsvex({
-			extensions: ['.md'], 
+			extensions: ['.md', '.mdx', '.svx'], 
+			layout: {
+				article: "./src/routes/layouts/article.svelte", 
+				sidebar: "./src/routes/layouts/sidebar.svelte"
+			}
 		})
 	]
 
