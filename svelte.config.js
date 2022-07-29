@@ -24,8 +24,7 @@ const config = {
 		mdsvex({
 			extensions: ['.md', '.mdx', '.svx'], 
 			layout: {
-				article: "./src/routes/layouts/article.svelte", 
-				sidebar: "./src/routes/layouts/sidebar.svelte"
+				article: "./src/routes/layouts/__layout-article.svelte", 
 			}
 		})
 	]

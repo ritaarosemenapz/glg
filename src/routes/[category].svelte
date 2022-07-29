@@ -1,6 +1,6 @@
 <script context="module">
-	import RelatedPosts from 'src/components/relatedPosts.svelte';
-
+	import { author } from '../stores/author';
+	import { fade } from 'svelte/transition';
 	const allPost = import.meta.glob('./*.md');
 	let body = [];
 	for (let path in allPost) {
@@ -34,9 +34,6 @@
 <script>
 	export let filteredPost;
 	export let category;
-	let colors = ['#f4ded9', '#ffcbdd', '#0cf574', '#edff7e', '#29e7cd'];
-	let random = Math.floor(Math.random() * colors.length);
-	let color = colors[random];
 </script>
 
 <svelte:head>
@@ -44,70 +41,39 @@
 </svelte:head>
 
 {#each filteredPost as post}
-	<article class="post">
-		<div class="wrapper" style="background-color: {color}">
-			<div class="post-header">
-				<div>
-					<p class="category-badge" style="color: {colors[random + 1]}">
-						{post.meta.category}
-					</p>
+	<section in:fade={{ duration: 400 }} class="card">
+		<div class="card-info">
+			<div>
+				<p class="category-badge">
+					{post.meta.category.toUpperCase()}
+				</p>
+				<a href={post.path.replace('.md', '')}>
 					<h1>{post.meta.title}</h1>
-					<p>{post.meta.summary}</p>
-					<div class="col-2">
-						<p>By {post.meta.author}</p>
-					</div>
-					<p>{post.meta.date}</p>
+				</a>
+				<div class="col-2">
+					<p>By {author.name}</p>
 				</div>
-				<img src={post.meta.cover} alt="" />
 			</div>
 		</div>
-		<section class="post-body">
-			<RelatedPosts />
-		</section>
-		<!-- <aside>
-		<div class="author-info">
-			<img class="author-pic" src={post.authorPic} alt={post.author} />
-			<p>{post.authorBio}</p>
-		</div>
-		<h3>BUY ME A COFFEE...</h3>
-		<RelatedPosts />
-	</aside> -->
-	</article>
+		<div class="cover-container"><img src={post.meta.cover} alt="" /></div>
+	</section>
 {/each}
 
 <style>
 	.category-badge {
 		font-family: 'DrukWide';
-		background-color: rgb(0, 0, 0);
-		color: white;
 		padding: 0.4em;
 	}
 
-	.author-info {
+	.card {
 		display: grid;
 		grid-template-columns: auto auto;
-		column-gap: 1em;
 		align-items: center;
+		align-content: stretch;
+		border-bottom: 3px solid black;
 	}
 
-	.author-info img {
-		width: 80px;
-		height: 80px;
-		object-fit: cover;
-		border-radius: 50%;
-		filter: grayscale();
-	}
-
-	.post {
-		display: grid;
-		grid-template-columns: 1fr, 1fr;
-	}
-
-	.wrapper {
-		grid-column: 1/4;
-	}
-
-	.post-header {
+	.card-info {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 		column-gap: 3em;
@@ -115,20 +81,11 @@
 		align-items: stretch;
 	}
 
-	aside {
-		grid-column: 3/4;
-		padding: 1em 2em;
-	}
-
-	@media (max-width: 1025px) {
-		aside {
-			display: none;
-		}
-
+	/* @media (max-width: 900) {
 		.post {
 			grid-template-columns: 1fr;
 		}
-	}
+	} */
 
 	.col-2 {
 		display: flex;
@@ -138,20 +95,13 @@
 		justify-content: space-between;
 	}
 
+	img {
+		max-width: 100%;
+		object-fit: cover;
+	}
+
 	h1 {
 		text-transform: uppercase;
 		font-size: 2.3rem;
-	}
-
-	section {
-		grid-column: 1/3;
-		margin: 3rem 2em;
-		line-height: 1.6rem;
-	}
-
-	section::first-letter {
-		font-size: 500%;
-		color: black;
-		font-weight: bold;
 	}
 </style>

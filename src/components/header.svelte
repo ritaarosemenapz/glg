@@ -1,4 +1,6 @@
 <script>
+	import { slide } from 'svelte/transition';
+
 	let showMenu = false;
 
 	function toggleMenu() {
@@ -15,16 +17,13 @@
 		<span on:click={toggleMenu} class="menu-toggle">MENU</span>
 	</div>
 	{#if showMenu}
-		<nav>
+		<nav transition:slide>
 			<ul>
 				<li>
-					<a href="#">Romance</a>
-				</li>
-				<li>
-					<a href="#">Lifestyle</a>
-				</li>
-				<li>
-					<a href="#">Sexuality</a>
+					<a href="dating">Dating</a>
+					<a href="movies">Movies</a>
+					<a href="tv">TV</a>
+					<a href="relationships">Relationships</a>
 				</li>
 			</ul>
 		</nav>

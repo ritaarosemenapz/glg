@@ -1,6 +1,7 @@
 <script context="module">
+	import FeaturedPost from '../components/featuredPost.svelte';
+	import { author } from '../stores/author';
 	import DailyQuote from 'src/components/dailyQuote.svelte';
-
 	// @ts-ignore
 	export const load = async ({ fetch }) => {
 		const posts = await fetch('./api/posts.json');
@@ -26,27 +27,31 @@
 </svelte:head>
 
 <main>
-	<section>
+	<FeaturedPost />
+	<DailyQuote />
+	<section class="post-grid">
 		{#each posts as post}
 			<article>
-				<img src={post.meta.cover} alt={post.meta.author} />
+				<a href={post.path}><img src={post.meta.cover} alt={post.title} /></a>
 				<span>
+					<div class="category-badge">
+						<a href={`${post.meta.category.toLowerCase()}`}>{post.meta.category} </a>
+					</div>
 					<h2><a href={post.path}>{post.meta.title}</a></h2>
-					<p class="author">By {post.meta.author}</p>
-					<a href={`${post.meta.category.toLowerCase()}`}>
-						<p>{post.meta.category}</p>
-					</a>
-					<p>{post.meta.date}</p>
+					<p class="author">By {author.name}</p>
+					<p>
+						{new Date(
+							post.meta.date.toLocaleString('ko-KO', { dateStyle: 'full', timeStyle: 'long' })
+						)}
+					</p>
 				</span>
 			</article>
 		{/each}
 	</section>
-	<DailyQuote />
 </main>
 
-<!-- TODO Dynamic routes for categories -->
 <style>
-	section {
+	.post-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
 		justify-items: center;
@@ -87,7 +92,24 @@
 	}
 
 	img:hover {
-		filter: hue-rotate(-0.25turn);
+		filter: hue-rotate(-150deg);
+		clip-path: polygon(
+			50% 0%,
+			94% 2%,
+			96% 18%,
+			100% 70%,
+			95% 98%,
+			50% 100%,
+			24% 98%,
+			3% 95%,
+			2% 34%,
+			14% 5%
+		);
+	}
+
+	.category-badge {
+		margin-bottom: 1em;
+		font-family: 'DrukWide';
 	}
 
 	.author {

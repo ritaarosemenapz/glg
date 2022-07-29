@@ -1,11 +1,8 @@
 ---
 layout: article
 title: "Alice fell in love"
-author: "Rita"
-authorBio: "I don-t give a f*ck"
-authorPic: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cG9ydHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=1200&q=60"
-cover: "https://images.unsplash.com/photo-1569706548645-8034449f6a7b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bGVzYmlhbiUyMGxvdmV8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60"
 category: "dating"
+cover: "https://images.unsplash.com/photo-1593526613712-7b4b9a707330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHdvbWVufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
 date: "2022-07-27"
 summary: "Here comes the sun"
 
