@@ -1,8 +1,8 @@
 <script>
-	import { data } from '../stores/femQuotes';
+	import { FEM_QUOTES } from '../stores/femQuotes';
 
-	let randomIndex = Math.floor(Math.random() * data.length);
-	let randomQuote = data[randomIndex];
+	let randomIndex = Math.floor(Math.random() * FEM_QUOTES.length);
+	let randomQuote = FEM_QUOTES[randomIndex];
 </script>
 
 <section>

@@ -1,57 +1,46 @@
 <script context="module">
-	import { author } from '../stores/author';
+	import { AUTHOR_INFO } from '../stores/author';
 	import { fade } from 'svelte/transition';
-	const allPost = import.meta.glob('./*.md');
-	let body = [];
-	for (let path in allPost) {
-		body.push(
-			allPost[path]().then(({ metadata }) => {
-				return {
-					path,
-					meta: metadata
-				};
-			})
-		);
-	}
 
-	export const load = async ({ params }) => {
-		const posts = await Promise.all(body);
-		const category = params.category;
+	export const load = async ({ fetch, params }) => {
+		const RESPONSE = await fetch('api/posts.json');
+		const POSTS = await RESPONSE.json();
+		const CATEGORY = params.category;
 
-		const filteredPost = posts.filter((post) => {
-			return post.meta.category.includes(category);
+		const FILTERED_POSTS = POSTS.filter((post) => {
+			return post.meta.category.includes(CATEGORY);
 		});
 
 		return {
 			props: {
-				filteredPost,
-				category
+				FILTERED_POSTS,
+				CATEGORY
 			}
 		};
 	};
 </script>
 
 <script>
-	export let filteredPost;
-	export let category;
+	export let FILTERED_POSTS;
+	export let CATEGORY;
 </script>
 
 <svelte:head>
-	<title>{category.toUpperCase()} | GLG</title>
+	<title>{CATEGORY.toUpperCase()} | GLG</title>
 </svelte:head>
 
-{#each filteredPost as post}
-	<section in:fade={{ duration: 400 }} class="card">
+{#each FILTERED_POSTS as post}
+	<section transition:fade={{ duration: 200 }} class="card">
 		<div class="card-info">
 			<div>
 				<p class="category-badge">
 					{post.meta.category.toUpperCase()}
 				</p>
 				<a href={post.path.replace('.md', '')}>
-					<h1>{post.meta.title}</h1>
+					<h2>{post.meta.title}</h2>
 				</a>
 				<div class="col-2">
-					<p>By {author.name}</p>
+					<p>By {AUTHOR_INFO.name}</p>
 				</div>
 			</div>
 		</div>
@@ -67,9 +56,8 @@
 
 	.card {
 		display: grid;
-		grid-template-columns: auto auto;
-		align-items: center;
-		align-content: stretch;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		align-items: stretch;
 		border-bottom: 3px solid black;
 	}
 
@@ -78,7 +66,6 @@
 		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 		column-gap: 3em;
 		padding: 2em;
-		align-items: stretch;
 	}
 
 	/* @media (max-width: 900) {
@@ -96,12 +83,15 @@
 	}
 
 	img {
-		max-width: 100%;
+		width: 400px;
+		height: 300px;
 		object-fit: cover;
 	}
 
-	h1 {
+	h2 {
 		text-transform: uppercase;
 		font-size: 2.3rem;
+		text-decoration: none;
+		margin: 0;
 	}
 </style>

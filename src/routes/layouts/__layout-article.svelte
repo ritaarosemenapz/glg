@@ -1,12 +1,14 @@
 <script>
 	import { fade } from 'svelte/transition';
-	import Sidebar from '../../components/sidebar.svelte';
-	import { author } from '../../stores/author';
+	import Sidebar from '../../components/Sidebar.svelte';
+	import { AUTHOR_INFO } from '../../stores/author';
 	export let title;
 	export let category;
 	export let cover;
 	export let date;
 	export let summary;
+	export let photoCredit;
+	export let photoAlt;
 
 	let colors = ['#f4ded9', '#ffcbdd', '#0cf574', '#edff7e', '#29e7cd'];
 	let random = Math.floor(Math.random() * colors.length);
@@ -17,23 +19,24 @@
 	<section class="post">
 		<div class="wrapper" style="background-color: {color}">
 			<div class="post-header">
-				<div>
+				<div class="post-header__text">
 					<p class="category-badge" style="color: {colors[random + 1]}">
 						{category.toUpperCase()}
 					</p>
 					<h1>{title}</h1>
 					<p>{summary}</p>
 					<div class="col-2">
-						<p>By {author.name}</p>
+						<p>By {AUTHOR_INFO.name}</p>
 					</div>
-					<p>{date}</p>
+					<p class="post-date">{new Date(date).toDateString()}</p>
+					<p class="photo-credit">{@html photoCredit}</p>
 				</div>
 				<img src={cover} alt="" />
 			</div>
 		</div>
 	</section>
 	<aside>
-		<Sidebar name={author.name} bio={author.bio} pic={author.picture} />
+		<Sidebar name={AUTHOR_INFO.name} bio={AUTHOR_INFO.bio} pic={AUTHOR_INFO.picture} />
 	</aside>
 	<article class="post-body">
 		<slot />
@@ -42,13 +45,19 @@
 
 <style>
 	.post-body::first-letter {
-		font-size: 500%;
+		font-size: 400%;
+		padding: 0.2em;
 		color: black;
 		font-weight: bold;
 	}
 
+	.post-body::first-line {
+		font-style: italic;
+	}
+
 	.post-body {
-		padding: 0 2.5em;
+		padding: 0 4em;
+		line-height: 1.8em;
 	}
 
 	.category-badge {
@@ -74,10 +83,14 @@
 
 	.post-header {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		column-gap: 3em;
-		padding: 2em;
-		align-items: stretch;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.post-header__text {
+		margin-left: 2em;
 	}
 
 	.col-2 {
@@ -88,9 +101,21 @@
 		justify-content: space-between;
 	}
 
+	img {
+		width: 700px;
+		height: 500px;
+		object-fit: cover;
+	}
+
 	h1 {
 		text-transform: uppercase;
-		font-size: 2.3rem;
+		font-size: 2rem;
+	}
+
+	.photo-credit,
+	.post-date {
+		font-size: 0.8rem;
+		text-transform: uppercase;
 	}
 
 	.post {

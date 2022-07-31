@@ -1,35 +1,66 @@
-<section>
-	<div class="image-container">
-		<img
-			src="https://images.unsplash.com/photo-1508153460964-48ffffcb0829?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-			alt="#"
-		/>
-	</div>
-	<div class="text-container">
-		<h2>This is so damn good</h2>
-		<p>Some amazing content here from my last post.</p>
-	</div>
-</section>
+<script>
+	export let title;
+	export let summary;
+	export let cover;
+	export let category;
+	export let path;
+</script>
+
+<a href={path}>
+	<section>
+		<div class="image-container">
+			<img src={cover} alt="#" />
+		</div>
+		<div class="text-container">
+			<p class="category-badge">{category}</p>
+			<h2>{title}</h2>
+			<p class="summary">{summary}</p>
+		</div>
+	</section>
+</a>
 
 <style>
 	section {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: auto auto;
 		justify-items: center;
 		align-items: center;
+		margin-top: 2em;
 		padding-bottom: 1em;
+		column-gap: 2em;
+	}
+
+	.summary {
+		font-size: 1.8rem;
 	}
 
 	h2 {
 		font-size: 3.5rem;
 		text-transform: uppercase;
+		margin: 0;
 	}
 
 	.image-container {
 		order: 1;
+		width: 400px;
 	}
 
 	.text-container {
 		margin-left: 2em;
+	}
+
+	@media (max-width: 789px) {
+		section {
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		.image-container {
+			order: -1;
+		}
 	}
 </style>

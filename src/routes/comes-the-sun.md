@@ -1,10 +1,12 @@
 ---
 layout: article
-title: "Sexiest women on planet"
-cover: "https://images.unsplash.com/photo-1600599351626-87228b0f2ba2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d29tZW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
-category: "dating"
-date: "2022-09-01"
+title: "This is the latest"
+cover: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+category: "tv"
+date: "2022-12-29"
 summary: "Here comes the sun"
+photoCredit: "https://unsplash.com/@cowomen"
+photoAlt: "Photo of woman"
 
 ---
 
@@ -14,7 +16,6 @@ Dui faucibus in ornare quam viverra orci sagittis. Et magnis dis parturient mont
 
 Phasellus faucibus scelerisque eleifend donec. Nunc sed id semper risus in hendrerit. Tempus quam pellentesque nec nam aliquam sem et tortor. Urna porttitor rhoncus dolor purus non enim. Nisl rhoncus mattis rhoncus urna neque viverra justo. Metus aliquam eleifend mi in nulla. Ultricies tristique nulla aliquet enim tortor. A lacus vestibulum sed arcu non odio euismod. Sed lectus vestibulum mattis ullamcorper. Nibh mauris cursus mattis molestie a iaculis. Natoque penatibus et magnis dis.
 
-Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Eu feugiat pretium nibh ipsum consequat. Sit amet nisl purus in mollis nunc. Urna et pharetra pharetra massa massa ultricies mi. Placerat duis ultricies lacus sed turpis tincidunt. Lacus sed viverra tellus in hac. Sem et tortor consequat id porta nibh venenatis cras. Massa sapien faucibus et molestie ac. Est ante in nibh mauris cursus. Sed euismod nisi porta lorem mollis. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis.
+> Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Eu feugiat pretium nibh ipsum consequat. Sit amet nisl purus in mollis nunc. Urna et pharetra pharetra massa massa ultricies mi. Placerat duis ultricies lacus sed turpis tincidunt. Lacus sed viverra tellus in hac. Sem et tortor consequat id porta nibh venenatis cras. Massa sapien faucibus et molestie ac. Est ante in nibh mauris cursus. Sed euismod nisi porta lorem mollis. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis.
 
 Tellus at urna condimentum mattis pellentesque. Morbi leo urna molestie at elementum. Praesent tristique magna sit amet purus gravida quis. Fermentum leo vel orci porta non pulvinar. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. In cursus turpis massa tincidunt dui. Sit amet risus nullam eget felis eget nunc. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Ligula ullamcorper malesuada proin libero. Id velit ut tortor pretium viverra suspendisse potenti. Facilisi nullam vehicula ipsum a arcu cursus. Egestas egestas fringilla phasellus faucibus. Vel risus commodo viverra maecenas accumsan. Egestas purus viverra accumsan in nisl. Fringilla ut morbi tincidunt augue interdum velit euismod.
-   

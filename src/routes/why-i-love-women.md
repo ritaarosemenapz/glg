@@ -5,6 +5,8 @@ cover: "https://images.unsplash.com/photo-1658786335150-4e7180986f14?ixlib=rb-1.
 category: "tv"
 date: "2022-05-05"
 summary: "Here comes the sun"
+photoCredit: 'Photo by <a href="https://unsplash.com/@ilgmyzin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ilgmyzin</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+photoAlt: "Photo of woman"
 
 ---
 

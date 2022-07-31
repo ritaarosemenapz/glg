@@ -1,5 +1,5 @@
 <script>
-	import RelatedPosts from './relatedPosts.svelte';
+	import RelatedPosts from './RelatedPosts.svelte';
 	export let name;
 	export let bio;
 	export let pic;
@@ -24,7 +24,7 @@
 <style>
 	aside {
 		grid-column: 3/4;
-		padding: 1em 2em;
+		padding: 0 3em;
 	}
 
 	@media (max-width: 900px) {

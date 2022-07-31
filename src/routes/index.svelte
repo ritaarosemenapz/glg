@@ -1,56 +1,79 @@
 <script context="module">
-	import FeaturedPost from '../components/featuredPost.svelte';
-	import { author } from '../stores/author';
-	import DailyQuote from 'src/components/dailyQuote.svelte';
-	// @ts-ignore
-	export const load = async ({ fetch }) => {
-		const posts = await fetch('./api/posts.json');
-		const allPosts = await posts.json();
+	import FeaturedPost from '../components/FeaturedPost.svelte';
+	import DailyQuote from 'src/components/DailyQuote.svelte';
+
+	export async function load({ fetch }) {
+		const POSTS = await fetch('./api/posts.json');
+		const ALL_POSTS = await POSTS.json();
 
 		return {
 			props: {
-				posts: allPosts
+				posts: ALL_POSTS
 			}
 		};
-	};
+	}
 </script>
 
 <script>
-	export /**
-	 * @type {any}
-	 */
-	let posts;
+	export let posts;
+	let searchQuery;
 </script>
 
 <svelte:head>
 	<title>GirlsLikeGirls</title>
 </svelte:head>
 
-<main>
-	<FeaturedPost />
-	<DailyQuote />
-	<section class="post-grid">
-		{#each posts as post}
-			<article>
-				<a href={post.path}><img src={post.meta.cover} alt={post.title} /></a>
-				<span>
-					<div class="category-badge">
-						<a href={`${post.meta.category.toLowerCase()}`}>{post.meta.category} </a>
-					</div>
-					<h2><a href={post.path}>{post.meta.title}</a></h2>
-					<p class="author">By {author.name}</p>
-					<p>
-						{new Date(
-							post.meta.date.toLocaleString('ko-KO', { dateStyle: 'full', timeStyle: 'long' })
-						)}
-					</p>
-				</span>
-			</article>
-		{/each}
+<!-- <input bind:value={searchQuery} type="text" name="" id="" placeholder="Search..." />
+{#each posts as post}
+	<section class="search-container" style="opacity: 1">
+		{#if searchQuery && post.meta.title.includes(searchQuery)}
+			<div class="search-results">
+				<a href={post.path}>
+					<h3>{post.meta.title}</h3>
+				</a>
+			</div>
+		{/if}
 	</section>
-</main>
+{/each} -->
+
+{#if !searchQuery}
+	<main style="opacity: 1;">
+		<FeaturedPost
+			path={posts[0].path}
+			title={posts[0].meta.title}
+			summary={posts[0].meta.summary}
+			cover={posts[0].meta.cover}
+			category={posts[0].meta.category}
+		/>
+		<DailyQuote />
+		<section class="post-grid">
+			{#each posts as post}
+				{#if posts.indexOf(post) !== 0}
+					<a href={post.path}>
+						<article>
+							<img src={post.meta.cover} alt={post.title} />
+							<span>
+								<div class="category-badge">
+									<a href={`${post.meta.category.toLowerCase()}`}>{post.meta.category} </a>
+								</div>
+								<h2>{post.meta.title}</h2>
+								<p>
+									{new Date(post.meta.date).toDateString()}
+								</p>
+							</span>
+						</article>
+					</a>
+				{/if}
+			{/each}
+		</section>
+	</main>
+{/if}
 
 <style>
+	main {
+		opacity: 0;
+	}
+
 	.post-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
@@ -86,11 +109,6 @@
 		text-transform: uppercase;
 	}
 
-	a:hover {
-		color: var(--primary);
-		transition: 0.3s;
-	}
-
 	img:hover {
 		filter: hue-rotate(-150deg);
 		clip-path: polygon(
@@ -107,15 +125,18 @@
 		);
 	}
 
-	.category-badge {
-		margin-bottom: 1em;
-		font-family: 'DrukWide';
+	.search-container {
+		background-color: yellow;
+		opacity: 0;
+		width: 100vw;
 	}
 
-	.author {
-		padding: 0.5em 0;
-		font-weight: bold;
+	.search-results {
 		text-transform: uppercase;
-		font-size: 'DrukWide';
+		padding: 1em;
+	}
+
+	.search-container h3 {
+		line-height: 1em;
 	}
 </style>

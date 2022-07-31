@@ -21,6 +21,5 @@
 		text-transform: uppercase;
 		padding: 2em;
 		margin-top: 4em;
-		border-top: 2px solid black;
 	}
 </style>

@@ -1,4 +1,4 @@
-export const data = [
+export const FEM_QUOTES = [
   {
     "text": "You educate a man; you educate a man. You educate a woman; you educate a generation.",
     "author": "Brigham Young"

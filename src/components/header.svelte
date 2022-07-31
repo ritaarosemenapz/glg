@@ -16,6 +16,7 @@
 		</div>
 		<span on:click={toggleMenu} class="menu-toggle">MENU</span>
 	</div>
+
 	{#if showMenu}
 		<nav transition:slide>
 			<ul>

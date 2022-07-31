@@ -1,10 +1,12 @@
 ---
 layout: article
-title: "10 movies you have to watch"
+title: "Some other post"
 category: "movies"
-cover: "https://images.unsplash.com/photo-1593526613712-7b4b9a707330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHdvbWVufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
+cover: "https://images.unsplash.com/photo-1553028826-7c442e636161?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
 date: "2022-10-04"
 summary: "Here comes the sun"
+photoCredit: "https://unsplash.com/@cowomen"
+photoAlt: "Photo of woman"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer. At ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Massa tempor nec feugiat nisl pretium fusce id velit. Purus non enim praesent elementum facilisis. Neque egestas congue quisque egestas diam in. Fusce id velit ut tortor pretium. Risus nullam eget felis eget nunc lobortis. Non arcu risus quis varius quam quisque. Dignissim convallis aenean et tortor at risus viverra adipiscing. Sit amet commodo nulla facilisi nullam vehicula ipsum. Integer feugiat scelerisque varius morbi enim nunc faucibus. Ligula ullamcorper malesuada proin libero. Orci eu lobortis elementum nibh tellus molestie.
