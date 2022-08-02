@@ -1,14 +1,10 @@
 <script>
 	export let name;
 	export let bio;
-	export let pic;
 </script>
 
 <aside>
 	<div class="author-info">
-		<!-- <div>
-			<img class="author-pic" src={pic} alt={name.replace(/[^\S\r\n]/, '-').toLowerCase()} />
-		</div> -->
 		<div>
 			<p class="author-name">By {name}</p>
 			<p class="author-bio">{bio}</p>
@@ -43,11 +39,11 @@
 		font-size: 1rem;
 	}
 
-	.author-info img {
+	/* .author-info img {
 		width: 80px;
 		height: 80px;
 		object-fit: cover;
 		border-radius: 50%;
 		filter: grayscale();
-	}
+	} */
 </style>

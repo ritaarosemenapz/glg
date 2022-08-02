@@ -1,6 +1,5 @@
 <script>
 	import { fade } from 'svelte/transition';
-	import Sidebar from '../../components/Sidebar.svelte';
 	import { AUTHOR_INFO } from '../../stores/author';
 	export let title;
 	export let category;
@@ -31,9 +30,7 @@
 			</div>
 		</div>
 	</section>
-	<aside>
-		<Sidebar name={AUTHOR_INFO.name} bio={AUTHOR_INFO.bio} pic={AUTHOR_INFO.picture} />
-	</aside>
+	<aside />
 	<article class="post-body">
 		<slot />
 	</article>

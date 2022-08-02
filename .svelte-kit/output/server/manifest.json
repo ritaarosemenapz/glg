@@ -1,0 +1,131 @@
+{
+  ".svelte-kit/build/index.js": {
+    "file": "index.js",
+    "src": ".svelte-kit/build/index.js",
+    "isEntry": true,
+    "imports": [
+      "_index-511472e1.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/build/hooks.js"
+    ]
+  },
+  "src/routes/api/posts.json.js": {
+    "file": "entries/endpoints/api/posts.json.js",
+    "src": "src/routes/api/posts.json.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/routes/comes-the-sun.md",
+      "src/routes/i-need-to-move.md",
+      "src/routes/movies-you-have-to-watch.md",
+      "src/routes/why-i-love-women.md"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "entries/pages/__layout.svelte.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-511472e1.js"
+    ],
+    "css": [
+      "_app/immutable/assets/__layout-122aadb9.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/DrukBold-2f17993f.ttf",
+      "_app/immutable/assets/DrukWide-9d00be8d.ttf",
+      "_app/immutable/assets/Milkista-5556054e.ttf",
+      "_app/immutable/assets/Snowman-4ac981d4.ttf",
+      "_app/immutable/assets/Neutra-342f825c.ttf"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-511472e1.js"
+    ]
+  },
+  "src/routes/layouts/__layout-article.svelte": {
+    "file": "entries/pages/layouts/__layout-article.svelte.js",
+    "src": "src/routes/layouts/__layout-article.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-511472e1.js"
+    ],
+    "css": [
+      "_app/immutable/assets/__layout-article-066eb35a.css"
+    ]
+  },
+  "src/routes/[category].svelte": {
+    "file": "entries/pages/_category_.svelte.js",
+    "src": "src/routes/[category].svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-511472e1.js"
+    ],
+    "css": [
+      "_app/immutable/assets/[category]-6c43849c.css"
+    ]
+  },
+  "src/routes/comes-the-sun.md": {
+    "file": "entries/pages/comes-the-sun.md.js",
+    "src": "src/routes/comes-the-sun.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-511472e1.js",
+      "src/routes/layouts/__layout-article.svelte"
+    ]
+  },
+  "src/routes/i-need-to-move.md": {
+    "file": "entries/pages/i-need-to-move.md.js",
+    "src": "src/routes/i-need-to-move.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-511472e1.js",
+      "src/routes/layouts/__layout-article.svelte"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "entries/pages/index.svelte.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-511472e1.js"
+    ],
+    "css": [
+      "_app/immutable/assets/index-ebbb06d5.css"
+    ]
+  },
+  "src/routes/movies-you-have-to-watch.md": {
+    "file": "entries/pages/movies-you-have-to-watch.md.js",
+    "src": "src/routes/movies-you-have-to-watch.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-511472e1.js",
+      "src/routes/layouts/__layout-article.svelte"
+    ]
+  },
+  "src/routes/why-i-love-women.md": {
+    "file": "entries/pages/why-i-love-women.md.js",
+    "src": "src/routes/why-i-love-women.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-511472e1.js",
+      "src/routes/layouts/__layout-article.svelte"
+    ]
+  },
+  "_index-511472e1.js": {
+    "file": "_app/immutable/chunks/index-511472e1.js"
+  },
+  ".svelte-kit/build/hooks.js": {
+    "file": "_app/immutable/chunks/hooks-bced8853.js",
+    "src": ".svelte-kit/build/hooks.js",
+    "isDynamicEntry": true
+  }
+}
