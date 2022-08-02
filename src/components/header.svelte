@@ -1,24 +1,7 @@
-<script>
-	import { slide } from 'svelte/transition';
-
-	let showMenu = false;
-
-	function toggleMenu() {
-		showMenu = !showMenu;
-	}
-</script>
-
 <div class="container">
 	<div class="top-container">
-		<div>
-			<h1 class="site-title"><a href="/">GirlsLikeGirls</a></h1>
-			<p class="site-description">Thou shalt love.</p>
-		</div>
-		<span on:click={toggleMenu} class="menu-toggle">MENU</span>
-	</div>
-
-	{#if showMenu}
-		<nav transition:slide>
+		<h1 class="site-title"><a href="/">GIRLPOWER</a></h1>
+		<nav class="menu-large-screens">
 			<ul>
 				<li>
 					<a href="dating">Dating</a>
@@ -28,77 +11,65 @@
 				</li>
 			</ul>
 		</nav>
-	{/if}
+	</div>
 </div>
 
 <style>
 	.container {
-		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
-		background-color: white;
 		width: 100%;
+	}
+
+	.container * {
+		margin-left: 0.5em;
 	}
 
 	.top-container {
 		display: flex;
 		flex-flow: row wrap;
-		align-items: baseline;
-		justify-content: space-between;
+		align-items: center;
+		justify-content: flex-start;
 	}
 
-	@media screen and (max-width: 700px) {
+	.menu-large-screens li {
+		display: flex;
+	}
+
+	@media screen and (max-width: 1030px) {
 		.container {
 			flex-direction: column;
 		}
+		.menu-large-screens {
+			display: none;
+		}
 	}
-
-	nav {
-		display: flex;
-		z-index: 1;
-		justify-content: flex-end;
-		flex-direction: column-reverse;
-		background-color: white;
-		width: 100%;
+	@media screen and (max-width: 580px) {
+		.top-container {
+			flex-flow: row nowrap;
+			justify-content: center;
+			padding-bottom: 0.5em;
+		}
 	}
 
 	li {
-		font-size: 1.4rem;
 		list-style: none;
-		border-bottom: 3px solid blue;
-		padding: 0.5em 0;
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-			'Open Sans', 'Helvetica Neue', sans-serif;
+		font-family: var(--font-body);
 	}
 
 	ul {
 		padding: 0;
+		margin: 0;
 	}
 
 	li a {
-		color: black;
 		text-transform: uppercase;
-		font-weight: bold;
-		padding: 0 0.7em;
-	}
-
-	li a:hover {
-		text-shadow: 3px 2px 1px gold;
+		padding: 0.6em;
 	}
 
 	.site-title {
 		text-decoration: none;
-		margin-bottom: 0.2em;
-	}
-
-	.site-description {
-		color: blue;
-		font-family: 'DrukWide';
-		margin-top: 0;
-	}
-
-	.menu-toggle {
-		font-family: 'DrukWide';
-		cursor: pointer;
+		margin: 0;
+		font-family: 'Snowman';
 	}
 </style>

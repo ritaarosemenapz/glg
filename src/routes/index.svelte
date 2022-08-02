@@ -1,6 +1,7 @@
 <script context="module">
 	import FeaturedPost from '../components/FeaturedPost.svelte';
 	import DailyQuote from 'src/components/DailyQuote.svelte';
+	import { fade } from 'svelte/transition';
 
 	export async function load({ fetch }) {
 		const POSTS = await fetch('./api/posts.json');
@@ -16,71 +17,54 @@
 
 <script>
 	export let posts;
-	let searchQuery;
 </script>
 
 <svelte:head>
 	<title>GirlsLikeGirls</title>
 </svelte:head>
 
-<!-- <input bind:value={searchQuery} type="text" name="" id="" placeholder="Search..." />
-{#each posts as post}
-	<section class="search-container" style="opacity: 1">
-		{#if searchQuery && post.meta.title.includes(searchQuery)}
-			<div class="search-results">
-				<a href={post.path}>
-					<h3>{post.meta.title}</h3>
-				</a>
-			</div>
-		{/if}
-	</section>
-{/each} -->
-
-{#if !searchQuery}
-	<main style="opacity: 1;">
-		<FeaturedPost
-			path={posts[0].path}
-			title={posts[0].meta.title}
-			summary={posts[0].meta.summary}
-			cover={posts[0].meta.cover}
-			category={posts[0].meta.category}
-		/>
+<main in:fade={{ duration: 400 }}>
+	<FeaturedPost
+		path={posts[0].path}
+		title={posts[0].meta.title}
+		summary={posts[0].meta.summary}
+		cover={posts[0].meta.cover}
+		category={posts[0].meta.category}
+		date={new Date(posts[0].meta.date).toDateString()}
+	/>
+	<section class="quote">
 		<DailyQuote />
-		<section class="post-grid">
-			{#each posts as post}
-				{#if posts.indexOf(post) !== 0}
-					<a href={post.path}>
-						<article>
-							<img src={post.meta.cover} alt={post.title} />
-							<span>
-								<div class="category-badge">
-									<a href={`${post.meta.category.toLowerCase()}`}>{post.meta.category} </a>
-								</div>
-								<h2>{post.meta.title}</h2>
-								<p>
-									{new Date(post.meta.date).toDateString()}
-								</p>
-							</span>
-						</article>
-					</a>
-				{/if}
-			{/each}
-		</section>
-	</main>
-{/if}
+	</section>
+	<section class="post-grid">
+		{#each posts as post}
+			{#if posts.indexOf(post) !== 0}
+				<article>
+					<img src={post.meta.cover} alt={post.title} />
+					<span>
+						<div>
+							<a class="category-badge" href={`${post.meta.category.toLowerCase()}`}
+								>{post.meta.category}
+							</a>
+						</div>
+						<h2>{post.meta.title}</h2>
+						<p>
+							{new Date(post.meta.date).toDateString()}
+						</p>
+						<a class="read-more-tag" href={post.path}>Read More</a>
+					</span>
+				</article>
+			{/if}
+		{/each}
+	</section>
+</main>
 
 <style>
-	main {
-		opacity: 0;
-	}
-
 	.post-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
 		justify-items: center;
 		column-gap: 2em;
 		align-items: stretch;
-		border-bottom: 2px solid black;
 	}
 
 	article {
@@ -92,7 +76,7 @@
 		gap: 2em;
 		margin: 2em;
 		padding: 1em;
-		border-left: 2px solid black;
+		border-left: 4px solid black;
 	}
 
 	span {
@@ -125,18 +109,7 @@
 		);
 	}
 
-	.search-container {
-		background-color: yellow;
-		opacity: 0;
-		width: 100vw;
-	}
-
-	.search-results {
-		text-transform: uppercase;
-		padding: 1em;
-	}
-
-	.search-container h3 {
-		line-height: 1em;
+	.quote {
+		padding: 2em;
 	}
 </style>

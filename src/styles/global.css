@@ -8,6 +8,21 @@
 	src: url('../styles/fonts/DrukWide.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: Milkista;
+	src: url("../styles/fonts/Milkista.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: Snowman;
+	src: url("../styles/fonts/Snowman.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: Neutra;
+	src: url("../styles/fonts/Neutra.ttf") format('truetype');
+}
+
 *,
 *::after,
 *::before {
@@ -15,12 +30,19 @@
 }
 
 :root {
-	--primary: #f7623b;
-	--light: #f4ded9;
-	--accent-pink: #ffcbdd;
-	--accent-green: #0cf574;
-	--accent-yellow: #edff7e;
-	--accent-blue: #29e7cd;
+	--primary: #ff4747;
+	--secondary: #ffe0e0;
+	--dark-text: rgb(35, 35, 35);
+	--accent: #dfdfdf;
+	--font-headings: 'DrukBold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	--font-body: "Neutra", sans-serif;
+
+}
+
+html {
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
 }
 
 body {
@@ -28,44 +50,46 @@ body {
 	margin: 0;
 	width: 100vw;
 	height: 100vh;
-	font-size: 1.1rem;
-	font-family: Geneva, sans-serif;
+	font-size: 1.2rem;
+	font-family: var(--font-body);
 	font-weight: 200;
+	color: var(--dark-text);
 }
 
-::selection,
-::-moz-selection {
-	color: blue;
-	background-color: gold;
+::selection {
+	background-color: var(--secondary);
 }
 
 h1,
 h2,
 h3,
 h4 {
-	font-family: 'DrukBold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-family: var(--font-headings)
 }
 
 h1 {
-	font-size: 2.5rem;
+	font-size: 2.2rem;
 }
 
 h2 {
-	border-bottom: 3px solid black;
 	text-transform: capitalize;
-	margin: 2em 0;
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.8rem;
 }
 
 blockquote {
 	font-style: italic;
 	font-weight: bold;
-	color: blue;
-	font-size: 1.4rem;
+	color: var(--primary);
+	font-size: 1.8rem;
 }
 
 .category-badge {
 	margin-bottom: 1em;
-	font-family: 'DrukWide';
+	color: var(--primary);
 	text-transform: uppercase;
 }
 
@@ -76,6 +100,7 @@ ol[role='list'] {
 
 li {
 	line-height: 2rem;
+	font-family: (--font-body);
 }
 
 html:focus-within {
@@ -84,7 +109,16 @@ html:focus-within {
 
 a {
 	text-decoration: none;
-	color: black;
+	color: var(--primary);
+}
+
+a:hover {
+	color: var(--dark-text);
+}
+
+.read-more-tag {
+	text-transform: uppercase;
+	border-bottom: 2px solid var(--secondary);
 }
 
 a:not([class]) {

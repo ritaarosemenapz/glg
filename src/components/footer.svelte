@@ -1,25 +1,24 @@
 <script>
 	const year = new Date().getFullYear();
+	const HEART_ICON = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ph" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path fill="currentColor" d="M128 216S28 160 28 92a52 52 0 0 1 100-20a52 52 0 0 1 100 20c0 68-100 124-100 124Z" opacity=".2"></path><path fill="currentColor" d="M128 224a7.8 7.8 0 0 1-3.9-1C119.8 220.6 20 163.9 20 92a60 60 0 0 1 108-36a60 60 0 0 1 108 36c0 30.6-17.7 62-52.6 93.4a314.3 314.3 0 0 1-51.5 37.6a7.8 7.8 0 0 1-3.9 1Zm-3.9-15ZM80 48a44 44 0 0 0-44 44c0 55.2 74 103.7 92 114.7c18-11 92-59.5 92-114.7a44 44 0 0 0-84.6-17a8 8 0 0 1-14.8 0A43.8 43.8 0 0 0 80 48Z"></path></svg>`;
 </script>
 
 <div class="container">
-	<p>{year} © GirlsLikeGirls. All Rights Reserved.</p>
-	<p>
-		GirlsLikeGirls may earn commission from the links on this page, but we only feature products we
-		believe in.
-	</p>
+	<div class="footer-content">
+		<p>
+			{year} © All Rights Reserved. Crafted with {@html HEART_ICON} by Rita Arosemena-Perez. Built with
+			<a href="https://svelte.dev">Svelte</a>.
+		</p>
+	</div>
 </div>
 
 <style>
 	.container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		font-family: 'DrukWide';
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		padding: 2em;
+		text-align: left;
+		position: absolute;
+		line-height: 1.5rem;
+		padding: 0.3em 2em;
 		margin-top: 4em;
+		width: 100%;
 	}
 </style>

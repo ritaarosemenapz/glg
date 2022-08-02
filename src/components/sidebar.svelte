@@ -1,5 +1,4 @@
 <script>
-	import RelatedPosts from './RelatedPosts.svelte';
 	export let name;
 	export let bio;
 	export let pic;
@@ -7,16 +6,15 @@
 
 <aside>
 	<div class="author-info">
-		<div>
+		<!-- <div>
 			<img class="author-pic" src={pic} alt={name.replace(/[^\S\r\n]/, '-').toLowerCase()} />
-		</div>
+		</div> -->
 		<div>
 			<p class="author-name">By {name}</p>
 			<p class="author-bio">{bio}</p>
 		</div>
 	</div>
-	<h3>BUY ME A COFFEE...</h3>
-	<RelatedPosts />
+	<h4>BUY ME A COFFEE...</h4>
 </aside>
 
 <slot />

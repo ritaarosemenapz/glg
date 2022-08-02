@@ -9,29 +9,25 @@
 	export let summary;
 	export let photoCredit;
 	export let photoAlt;
-
-	let colors = ['#f4ded9', '#ffcbdd', '#0cf574', '#edff7e', '#29e7cd'];
-	let random = Math.floor(Math.random() * colors.length);
-	let color = colors[random];
 </script>
 
-<div transition:fade={{ duration: 200 }} class="container">
+<div in:fade={{ duration: 400 }} class="container">
 	<section class="post">
-		<div class="wrapper" style="background-color: {color}">
+		<div class="wrapper">
 			<div class="post-header">
-				<div class="post-header__text">
-					<p class="category-badge" style="color: {colors[random + 1]}">
+				<div>
+					<p class="category-badge">
 						{category.toUpperCase()}
 					</p>
 					<h1>{title}</h1>
 					<p>{summary}</p>
-					<div class="col-2">
-						<p>By {AUTHOR_INFO.name}</p>
-					</div>
+					<p>By {AUTHOR_INFO.name}</p>
 					<p class="post-date">{new Date(date).toDateString()}</p>
+				</div>
+				<div class="col-2">
+					<img src={cover} alt="" />
 					<p class="photo-credit">{@html photoCredit}</p>
 				</div>
-				<img src={cover} alt="" />
 			</div>
 		</div>
 	</section>
@@ -47,28 +43,22 @@
 	.post-body::first-letter {
 		font-size: 400%;
 		padding: 0.2em;
-		color: black;
 		font-weight: bold;
-	}
-
-	.post-body::first-line {
-		font-style: italic;
+		font-family: var(--font-headings);
+		color: var(--primary);
 	}
 
 	.post-body {
-		padding: 0 4em;
+		padding: 0 2em;
 		line-height: 1.8em;
-	}
-
-	.category-badge {
-		font-family: 'DrukWide';
-		background-color: rgb(0, 0, 0);
-		color: white;
-		padding: 0.4em;
 	}
 
 	.container {
 		display: grid;
+	}
+
+	.container * {
+		margin: 0.7em 0;
 	}
 
 	@media (max-width: 1025px) {
@@ -89,15 +79,9 @@
 		justify-content: space-between;
 	}
 
-	.post-header__text {
-		margin-left: 2em;
-	}
-
 	.col-2 {
 		display: flex;
-		font-family: 'DrukBold';
-		text-transform: uppercase;
-		font-size: 0.8rem;
+		flex-direction: column;
 		justify-content: space-between;
 	}
 
@@ -107,15 +91,16 @@
 		object-fit: cover;
 	}
 
-	h1 {
-		text-transform: uppercase;
-		font-size: 2rem;
-	}
-
 	.photo-credit,
 	.post-date {
-		font-size: 0.8rem;
+		font-size: 1rem;
 		text-transform: uppercase;
+	}
+
+	.post-date {
+		border-top: 1px solid var(--primary);
+		border-bottom: 1px solid var(--primary);
+		padding: 1em;
 	}
 
 	.post {

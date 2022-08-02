@@ -1,5 +1,4 @@
 <script context="module">
-	import { AUTHOR_INFO } from '../stores/author';
 	import { fade } from 'svelte/transition';
 
 	export const load = async ({ fetch, params }) => {
@@ -29,69 +28,67 @@
 	<title>{CATEGORY.toUpperCase()} | GLG</title>
 </svelte:head>
 
-{#each FILTERED_POSTS as post}
-	<section transition:fade={{ duration: 200 }} class="card">
-		<div class="card-info">
-			<div>
-				<p class="category-badge">
-					{post.meta.category.toUpperCase()}
-				</p>
-				<a href={post.path.replace('.md', '')}>
-					<h2>{post.meta.title}</h2>
-				</a>
-				<div class="col-2">
-					<p>By {AUTHOR_INFO.name}</p>
+<section class="container">
+	<h2>Latest articles on {CATEGORY}</h2>
+	{#each FILTERED_POSTS as post}
+		{#if post}
+			<div in:fade={{ duration: 400 }} class="card">
+				<img class="post-cover" src={post.meta.cover} alt="" />
+				<div class="card-info">
+					<div>
+						<h3>{post.meta.title}</h3>
+						<p class="summary">{post.meta.summary}</p>
+					</div>
+					<a class="read-more-tag" href={post.path.replace('.md', '')}>Read More</a>
 				</div>
 			</div>
+		{/if}
+	{:else}
+		<div class="no-posts-message">
+			<h3>Ups, seems like there are not posts in here yet...</h3>
+			<img
+				class="no-posts-img"
+				src="https://media2.giphy.com/media/YrHW5dZMvtokZBuI2b/giphy.gif?cid=ecf05e47b6prmhfnjcuel39i7z0wktpx4f80v496vcdztnix&rid=giphy.gif&ct=g"
+				alt=""
+			/>
 		</div>
-		<div class="cover-container"><img src={post.meta.cover} alt="" /></div>
-	</section>
-{/each}
+	{/each}
+</section>
 
 <style>
-	.category-badge {
-		font-family: 'DrukWide';
-		padding: 0.4em;
-	}
-
-	.card {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		align-items: stretch;
-		border-bottom: 3px solid black;
-	}
-
-	.card-info {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-		column-gap: 3em;
+	.container {
+		display: flex;
+		flex-direction: column;
 		padding: 2em;
 	}
 
-	/* @media (max-width: 900) {
-		.post {
-			grid-template-columns: 1fr;
-		}
-	} */
-
-	.col-2 {
+	.card {
 		display: flex;
-		font-family: 'DrukBold';
-		text-transform: uppercase;
-		font-size: 0.8rem;
-		justify-content: space-between;
+		border: 5px solid blue;
+		box-shadow: 10px 10px blue;
+		border-radius: 5px;
+		margin-bottom: 2rem;
 	}
 
-	img {
-		width: 400px;
-		height: 300px;
+	.post-cover {
 		object-fit: cover;
+		width: 200px;
+		height: 200px;
 	}
 
-	h2 {
-		text-transform: uppercase;
-		font-size: 2.3rem;
-		text-decoration: none;
+	.card-info {
+		padding: 1em;
+	}
+
+	.card-info * {
+		margin: 0.8em 0;
+	}
+
+	.no-posts-img {
+		width: 100%;
+	}
+
+	.summary {
 		margin: 0;
 	}
 </style>
