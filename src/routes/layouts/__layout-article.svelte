@@ -1,7 +1,8 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import { AUTHOR_INFO } from '../../stores/author';
-	import Sidebar from "src/components/Sidebar.svelte"
+	import Sidebar from "src/components/Sidebar.svelte";
+	import SocialShare from "src/components/SocialShare.svelte";
 	export let title;
 	export let category;
 	export let cover;
@@ -32,6 +33,7 @@
 		</div>
 	</section>
 	<aside>
+		<SocialShare />
 		<Sidebar name={AUTHOR_INFO.name} bio={AUTHOR_INFO.bio} />
 	</aside>
 	<article class="post-body">

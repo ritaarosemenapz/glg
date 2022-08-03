@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "X Things You Need to Stop Asking Permission For"
+title: "Dating a girl for the first time? "
 cover: "src/routes/images/marie-michele-bouchard-mDnsigCx9R4-unsplash.jpg"
 category: "tv"
 date: "2022-12-29"
