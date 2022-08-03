@@ -144,6 +144,16 @@
     "esbuild" "^0.14.48"
     "worktop" "0.8.0-next.14"
 
+"@sveltejs/adapter-netlify@^1.0.0-next.71":
+  "integrity" "sha512-la1CGtWO1xul1L3zEoFAoc4EX2uxZjrZcOMS3tkKB8drxhbQsNbnTE6fmSSMFiZXhxaikczrBgQwqIaDkLTmZg=="
+  "resolved" "https://registry.npmjs.org/@sveltejs/adapter-netlify/-/adapter-netlify-1.0.0-next.71.tgz"
+  "version" "1.0.0-next.71"
+  dependencies:
+    "@iarna/toml" "^2.2.5"
+    "esbuild" "^0.14.48"
+    "set-cookie-parser" "^2.4.8"
+    "tiny-glob" "^0.2.9"
+
 "@sveltejs/adapter-netlify@1.0.0-next.70":
   "integrity" "sha512-lIXY6KIgIFBz4+mdvilx9Ny8oFV7T2iVTKLirJayoI/SqPWGAcxklvWvjGfS4QT8rS9pWKDaKRUQM4M/gl8LlA=="
   "resolved" "https://registry.npmjs.org/@sveltejs/adapter-netlify/-/adapter-netlify-1.0.0-next.70.tgz"
