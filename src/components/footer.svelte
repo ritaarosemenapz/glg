@@ -7,7 +7,7 @@
 	<div class="footer-content">
 		<p>
 			{year} © All Rights Reserved. Crafted with {@html HEART_ICON} by Rita Arosemena-Perez. Built with
-			<a href="https://svelte.dev">Svelte</a>.
+			<a href="https://svelte.dev" target="__blank">Svelte</a>.
 		</p>
 	</div>
 </div>

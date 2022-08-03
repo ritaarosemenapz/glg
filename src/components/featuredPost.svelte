@@ -21,9 +21,9 @@
 <style>
 	section {
 		display: grid;
-		background-color: var(--primary);
 		grid-template-columns: auto auto;
 		justify-content: space-between;
+		background-color: var(--secondary);
 		align-items: center;
 		column-gap: 2em;
 	}
@@ -38,12 +38,10 @@
 	.text-container {
 		margin-left: 2em;
 		max-width: 800px;
-		color: white;
 	}
 
 	.post-title a {
 		font-family: var(--font-headings);
-		color: white;
 	}
 
 	.post-title a:hover {

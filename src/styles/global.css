@@ -30,8 +30,8 @@
 }
 
 :root {
-	--primary: #ff4747;
-	--secondary: #ffe0e0;
+	--primary: rgb(245, 94, 20);
+	--secondary: #ddd9d8;
 	--dark-text: rgb(35, 35, 35);
 	--accent: #6e6d7a;
 	--font-headings: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif --font-body: "Neutra", sans-serif;
@@ -89,6 +89,12 @@ h3 {
 
 .category-badge::before {
 	content: "#"
+}
+
+.close-tag {
+	cursor: pointer;
+	font-weight: bold;
+	border-bottom: 1.5px solid var(--primary);
 }
 
 ul[role='list'],

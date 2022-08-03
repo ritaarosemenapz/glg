@@ -47,8 +47,8 @@
 		flex-flow: row wrap;
 		list-style: none;
 		font-family: var(--font-body);
-		text-transform: uppercase;
 		gap: 0.7em;
+		font-weight: bold;
 	}
 
 	ul {

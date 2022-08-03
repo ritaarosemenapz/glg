@@ -43,20 +43,4 @@
 		background-color: var(--dark-text);
 		padding: 0;
 	}
-
-	.social-icons {
-		padding: 0 1em;
-	}
-
-	.social-icons ul {
-		padding: 0;
-		margin: 0;
-		display: flex;
-		justify-content: flex-end;
-	}
-
-	.social-icons li {
-		list-style: none;
-		border-bottom: 3px solid var(--dark-text);
-	}
 </style>
