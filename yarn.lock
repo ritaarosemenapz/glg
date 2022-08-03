@@ -419,7 +419,7 @@
   "resolved" "https://registry.npmjs.org/console-control-strings/-/console-control-strings-1.1.0.tgz"
   "version" "1.1.0"
 
-"cross-fetch@^3.0.6", "cross-fetch@^3.1.5":
+"cross-fetch@^3.0.6":
   "integrity" "sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw=="
   "resolved" "https://registry.npmjs.org/cross-fetch/-/cross-fetch-3.1.5.tgz"
   "version" "3.1.5"
@@ -823,15 +823,6 @@
   "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.10.tgz"
   "version" "4.2.10"
 
-"graphql-request@^4.3.0":
-  "integrity" "sha512-2v6hQViJvSsifK606AliqiNiijb1uwWp6Re7o0RTyH+uRTv/u7Uqm2g4Fjq/LgZIzARB38RZEvVBFOQOVdlBow=="
-  "resolved" "https://registry.npmjs.org/graphql-request/-/graphql-request-4.3.0.tgz"
-  "version" "4.3.0"
-  dependencies:
-    "cross-fetch" "^3.1.5"
-    "extract-files" "^9.0.0"
-    "form-data" "^3.0.0"
-
 "graphql-request@3.4.0":
   "integrity" "sha512-acrTzidSlwAj8wBNO7Q/UQHS8T+z5qRGquCQRv9J1InwR01BBWV9ObnoE+JS5nCCEj8wSGS0yrDXVDoRiKZuOg=="
   "resolved" "https://registry.npmjs.org/graphql-request/-/graphql-request-3.4.0.tgz"
@@ -840,11 +831,6 @@
     "cross-fetch" "^3.0.6"
     "extract-files" "^9.0.0"
     "form-data" "^3.0.0"
-
-"graphql@^16.5.0", "graphql@14 - 16":
-  "integrity" "sha512-qbHgh8Ix+j/qY+a/ZcJnFQ+j8ezakqPiHwPiZhV/3PgGlgf96QMBB5/f2rkiC9sgLoy/xvT6TSiaf2nTHJh5iA=="
-  "resolved" "https://registry.npmjs.org/graphql/-/graphql-16.5.0.tgz"
-  "version" "16.5.0"
 
 "graphql@14.x || 15.x", "graphql@15.5.0":
   "integrity" "sha512-OmaM7y0kaK31NKG31q4YbD2beNYa6jBBKtMFT6gLYJljHLJr42IqJ8KX08u3Li/0ifzTU5HjmoOOrwa5BRLeDA=="

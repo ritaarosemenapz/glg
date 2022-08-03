@@ -10,7 +10,7 @@
 			<p class="author-bio">{bio}</p>
 		</div>
 	</div>
-	<h4>BUY ME A COFFEE...</h4>
+	<button class="support-button" type="button" name="support">☕️ Buy me a coffee</button>
 </aside>
 
 <slot />
@@ -32,18 +32,26 @@
 		grid-template-columns: auto auto;
 		align-items: center;
 		column-gap: 1em;
+		font-size: 1rem
 	}
 
 	.author-name {
-		font-family: 'DrukWide';
-		font-size: 1rem;
+		font-weight: bold;
 	}
 
-	/* .author-info img {
-		width: 80px;
-		height: 80px;
-		object-fit: cover;
-		border-radius: 50%;
-		filter: grayscale();
-	} */
+	.support-button {
+		background-color: var(--primary);
+		border: none;
+		color: white;
+		font-weight: bold;
+		padding: 0.5em;
+		cursor: pointer;
+		border-radius: 5px;
+	}
+
+	.support-button:focus {
+		background-color: rgb(255, 91, 91);
+		padding: 0.45em;
+	}
+
 </style>

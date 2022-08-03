@@ -2,8 +2,6 @@
 	import '../styles/global.css';
 	import Header from 'src/components/Header.svelte';
 	import Footer from 'src/components/Footer.svelte';
-	import MobileMenu from '../components/mobileMenu.svelte';
-
 	export async function load({ fetch }) {
 		const POSTS = await fetch('../api/posts.json');
 		const ALL_POSTS = await POSTS.json();
@@ -34,7 +32,7 @@
 	<span on:click={displaySearchBox} class="search-icon">{@html OPEN_SEARCH_ICON} </span>
 	{#if showSearchBox}
 		<section class="search-container">
-			<p on:click={displaySearchBox} class="close-search-box">(X) CLOSE</p>
+			<p on:click={displaySearchBox} class="close-search-box">CLOSE</p>
 			<h4>Stories</h4>
 			<input class="search-box" bind:value={searchQuery} type="text" placeholder="Search..." />
 			{#each posts as post}
@@ -61,16 +59,13 @@
 <style>
 	header {
 		padding: 1em;
-		flex-flow: row wrap;
 		display: flex;
-		align-items: baseline;
 		justify-content: space-between;
 		background-color: var(--secondary);
 	}
 
 	.close-search-box {
 		cursor: pointer;
-		text-decoration: underline;
 	}
 
 	input {
@@ -112,7 +107,6 @@
 		align-items: center;
 		justify-content: center;
 		font-size: 1rem;
-		border-bottom: 1px solid var(--secondary);
 		margin: 1em 0;
 	}
 

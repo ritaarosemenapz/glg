@@ -33,7 +33,7 @@
 	--primary: #ff4747;
 	--secondary: #ffe0e0;
 	--dark-text: rgb(35, 35, 35);
-	--accent: rgb(10, 102, 152);
+	--accent: #6e6d7a;
 	--font-headings: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif --font-body: "Neutra", sans-serif;
 	--font-body: 'Georgia, ' Times New Roman', Times, serif';
 
@@ -114,18 +114,6 @@ a:hover {
 	color: var(--dark-text);
 }
 
-.read-more-tag {
-	text-transform: uppercase;
-	background-color: var(--secondary);
-	padding: 0.4em;
-	color: var(--dark-text);
-	font-weight: bold;
-	border-radius: 3px;
-}
-
-.read-more-tag:hover {
-	color: var(--primary);
-}
 
 a:not([class]) {
 	text-decoration-skip-ink: auto;

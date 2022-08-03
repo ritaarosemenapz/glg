@@ -1,6 +1,6 @@
 <script context="module">
-	import { fade } from 'svelte/transition';
-
+	import { fade } from "svelte/transition";
+	import ReadMoreTag from "src/components/ReadMoreTag.svelte";
 	export const load = async ({ fetch, params }) => {
 		const RESPONSE = await fetch('api/posts.json');
 		const POSTS = await RESPONSE.json();
@@ -38,7 +38,7 @@
 					<div>
 						<h3>{post.meta.title}</h3>
 					</div>
-					<a class="read-more-tag" href={post.path.replace('.md', '')}>Read More</a>
+					<ReadMoreTag path={post.path.replace('.md', '')} />
 				</div>
 			</div>
 		{/if}

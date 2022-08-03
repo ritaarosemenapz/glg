@@ -5,6 +5,7 @@
 	export let path;
 	export let date;
 	export let alt;
+	import ReadMoreTag from "src/components/ReadMoreTag.svelte"
 </script>
 
 <section>
@@ -13,7 +14,7 @@
 		<p class="category-badge">{category}</p>
 		<h2 class="post-title"><a href={path}>{title}</a></h2>
 		<p class="post-date">{date}</p>
-		<a class="read-more-tag" href={path}>Read More</a>
+		<ReadMoreTag path={path} />
 	</div>
 </section>
 

@@ -1,3 +1,10 @@
+
+<script>
+	import MobileMenu from "src/components/mobileMenu.svelte"
+</script>
+
+
+<MobileMenu />
 <div class="container">
 	<div class="top-container">
 		<h1 class="site-title"><a href="/">GIRLPOWER</a></h1>
@@ -54,4 +61,15 @@
 		margin: 0 1em 0 0;
 		font-family: 'Snowman';
 	}
+
+	@media (max-width: 700px) {
+	.top-container {
+		justify-content: center;
+	}
+	.menu-large-screens {
+		display: none;
+	}
+
+	}
+
 </style>
