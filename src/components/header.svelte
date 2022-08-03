@@ -18,10 +18,9 @@
 	.container {
 		justify-content: space-between;
 		flex-direction: column;
-		width: 100%;
 	}
 
-	.container * {
+	.container {
 		margin-left: 0.5em;
 	}
 
@@ -32,29 +31,17 @@
 		justify-content: flex-start;
 	}
 
+	.menu-large-screens {
+		margin-right: 1em;
+	}
+
 	.menu-large-screens li {
 		display: flex;
-	}
-
-	@media screen and (max-width: 1030px) {
-		.container {
-			flex-direction: column;
-		}
-		.menu-large-screens {
-			display: none;
-		}
-	}
-	@media screen and (max-width: 580px) {
-		.top-container {
-			flex-flow: row nowrap;
-			justify-content: center;
-			padding-bottom: 0.5em;
-		}
-	}
-
-	li {
+		flex-flow: row wrap;
 		list-style: none;
 		font-family: var(--font-body);
+		text-transform: uppercase;
+		gap: 0.7em;
 	}
 
 	ul {
@@ -62,14 +49,9 @@
 		margin: 0;
 	}
 
-	li a {
-		text-transform: uppercase;
-		padding: 0.6em;
-	}
-
 	.site-title {
 		text-decoration: none;
-		margin: 0;
+		margin: 0 1em 0 0;
 		font-family: 'Snowman';
 	}
 </style>

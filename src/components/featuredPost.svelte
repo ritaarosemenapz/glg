@@ -1,21 +1,18 @@
 <script>
 	export let title;
-	export let summary;
 	export let cover;
 	export let category;
 	export let path;
 	export let date;
+	export let alt;
 </script>
 
 <section>
-	<!-- <div class="image-container"> -->
-	<img src={cover} alt="#" />
-	<!-- </div> -->
+	<img src={cover} {alt} />
 	<div class="text-container">
 		<p class="category-badge">{category}</p>
-		<a class="post-title" href={path}>{title}</a>
-		<p class="post-summary">{summary}</p>
-		<p>{date}</p>
+		<h2 class="post-title"><a href={path}>{title}</a></h2>
+		<p class="post-date">{date}</p>
 		<a class="read-more-tag" href={path}>Read More</a>
 	</div>
 </section>
@@ -37,26 +34,18 @@
 		object-fit: cover;
 	}
 
-	.category-badge {
-		color: white;
-	}
-
 	.text-container {
 		margin-left: 2em;
+		max-width: 800px;
 		color: white;
 	}
 
-	.post-title {
-		font-size: 2rem;
+	.post-title a {
 		font-family: var(--font-headings);
 		color: white;
 	}
 
-	a {
-		color: white;
-	}
-
-	a:hover {
+	.post-title a:hover {
 		color: var(--dark-text);
 	}
 

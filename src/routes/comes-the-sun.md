@@ -1,13 +1,12 @@
 ---
 layout: article
-title: "This is the latest"
-cover: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+title: "X Things You Need to Stop Asking Permission For"
+cover: "src/routes/images/marie-michele-bouchard-mDnsigCx9R4-unsplash.jpg"
 category: "tv"
 date: "2022-12-29"
-summary: "Here comes the sun"
-photoCredit: "https://unsplash.com/@cowomen"
-photoAlt: "Photo of woman"
-
+summary: "Just stop."
+photoCredit: 'Photo by <a href="https://unsplash.com/@minusculemarie?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marie-Michèle Bouchard</a> on <a href="https://unsplash.com/@ritaarosemenapz/likes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+photoAlt: 'PHOTO'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer. At ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Massa tempor nec feugiat nisl pretium fusce id velit. Purus non enim praesent elementum facilisis. Neque egestas congue quisque egestas diam in. Fusce id velit ut tortor pretium. Risus nullam eget felis eget nunc lobortis. Non arcu risus quis varius quam quisque. Dignissim convallis aenean et tortor at risus viverra adipiscing. Sit amet commodo nulla facilisi nullam vehicula ipsum. Integer feugiat scelerisque varius morbi enim nunc faucibus. Ligula ullamcorper malesuada proin libero. Orci eu lobortis elementum nibh tellus molestie.

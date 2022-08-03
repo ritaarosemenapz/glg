@@ -8,41 +8,40 @@
 	const TUMBLR_ICON = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><g fill="none"><path fill="#2F88FF" stroke="#000" stroke-width="4" d="M39 6H9C7.34315 6 6 7.34315 6 9V39C6 40.6569 7.34315 42 9 42H39C40.6569 42 42 40.6569 42 39V9C42 7.34315 40.6569 6 39 6Z"></path><path fill="#fff" d="M15 22V17H20V14L26 12V17H31V22H26V29C26 29 26 30.5 28 31C30 31.5 33 30 33 30L31 36H26C22.5 36 20 32.5 20 30V22H15Z"></path></g></svg>`;
 </script>
 
-<section>
-	<blockquote>
-		{#if randomQuote}
-			"{randomQuote.text}" - {randomQuote.author}
-		{:else}
-			<p>"Women are strong as hell."</p>
-		{/if}
-	</blockquote>
-	<div class="social-icons">
-		<ul>
-			<li>
-				<a href="">{@html TWITTER_ICON}</a>
-			</li>
-			<li>
-				<a href="">{@html FACEBOOK_ICON}</a>
-			</li>
-			<li>
-				<a href="">{@html TUMBLR_ICON}</a>
-			</li>
-		</ul>
-	</div>
+<section class="container">
+	{#if randomQuote}
+		<blockquote class="daily-quote">
+			<p>"{randomQuote.text}"</p>
+			<p class="author">– {randomQuote.author}</p>
+		</blockquote>
+	{:else}
+		<blockquote>"Women are strong as hell."</blockquote>
+	{/if}
 </section>
 
 <style>
-	blockquote {
-		font-family: Arial, Helvetica, sans-serif;
-		background: -webkit-linear-gradient(#3f5efb, #fc466b);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+	.daily-quote {
 		margin: 0;
-		padding: 1em;
+		padding: 1em 2em;
+		font-family: "Arial";
+		font-weight: bold;
+		color: white;
+		font-size: 1.8rem;
+	}
+
+	.author {
+		color: var(--secondary);
 	}
 
 	section {
 		align-items: center;
+		background-color: var(--dark-text);
+		padding: 0;
 	}
 
 	.social-icons {

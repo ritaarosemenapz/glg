@@ -24,7 +24,7 @@
 					<p class="post-date">{new Date(date).toDateString()}</p>
 				</div>
 				<div class="col-2">
-					<img src={cover} alt="" />
+					<img src={cover} alt={photoAlt} />
 					<p class="photo-credit">{@html photoCredit}</p>
 				</div>
 			</div>
@@ -88,12 +88,6 @@
 		object-fit: cover;
 	}
 
-	.photo-credit,
-	.post-date {
-		font-size: 1rem;
-		text-transform: uppercase;
-	}
-
 	.post-date {
 		border-top: 1px solid var(--primary);
 		border-bottom: 1px solid var(--primary);
@@ -104,4 +98,5 @@
 		grid-column: 1/3;
 		margin: 3rem 2em;
 	}
+
 </style>
