@@ -1,4 +1,18 @@
-import { c as create_ssr_component, v as validate_component } from "../../_app/immutable/chunks/index-511472e1.js";
+import { c as create_ssr_component, e as escape, v as validate_component } from "../../_app/immutable/chunks/index-511472e1.js";
+const Footer_svelte_svelte_type_style_lang = "";
+const css$3 = {
+  code: ".container.svelte-1lb27zc{text-align:left;position:absolute;line-height:1.5rem;padding:0.3em 2em;margin-top:4em;width:100%}",
+  map: null
+};
+const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const year = new Date().getFullYear();
+  const HEART_ICON = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ph" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path fill="currentColor" d="M128 216S28 160 28 92a52 52 0 0 1 100-20a52 52 0 0 1 100 20c0 68-100 124-100 124Z" opacity=".2"></path><path fill="currentColor" d="M128 224a7.8 7.8 0 0 1-3.9-1C119.8 220.6 20 163.9 20 92a60 60 0 0 1 108-36a60 60 0 0 1 108 36c0 30.6-17.7 62-52.6 93.4a314.3 314.3 0 0 1-51.5 37.6a7.8 7.8 0 0 1-3.9 1Zm-3.9-15ZM80 48a44 44 0 0 0-44 44c0 55.2 74 103.7 92 114.7c18-11 92-59.5 92-114.7a44 44 0 0 0-84.6-17a8 8 0 0 1-14.8 0A43.8 43.8 0 0 0 80 48Z"></path></svg>`;
+  $$result.css.add(css$3);
+  return `<div class="${"container svelte-1lb27zc"}"><div class="${"footer-content"}"><p>${escape(year)} \xA9 All Rights Reserved. Crafted with <!-- HTML_TAG_START -->${HEART_ICON}<!-- HTML_TAG_END --> by Rita Arosemena-Perez. Built with
+			<a href="${"https://svelte.dev"}" target="${"__blank"}">Svelte</a>.
+		</p></div>
+</div>`;
+});
 const mobileMenu_svelte_svelte_type_style_lang = "";
 const css$2 = {
   code: ".menu-small-screens-container.svelte-17dibnu.svelte-17dibnu{display:flex;flex-direction:column;position:absolute;background-color:#f3f3f4;top:0;transform:translateX(-20%);max-width:600px;height:100%;z-index:1;text-align:right}.menu-small-screens.svelte-17dibnu li.svelte-17dibnu{display:flex;flex-direction:column;margin:0;padding-top:1em;padding-left:2em;font-weight:bold;text-transform:uppercase}.menu-small-screens.svelte-17dibnu.svelte-17dibnu{margin-right:1em;padding:0.6em}.menu-toggle.svelte-17dibnu.svelte-17dibnu{cursor:pointer;font-weight:bold;display:none;color:var(--primary)}@media(max-width: 700px){.menu-toggle.svelte-17dibnu.svelte-17dibnu{display:block}}",
@@ -47,7 +61,8 @@ const _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 	<span class="${"search-icon svelte-1udg5sc"}"><!-- HTML_TAG_START -->${OPEN_SEARCH_ICON}<!-- HTML_TAG_END --></span>
 	${``}</header>
 <main><article id="${"body"}">${slots.default ? slots.default({}) : ``}</article></main>
-<footer></footer>`;
+<footer>${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}
+</footer>`;
 });
 export {
   _layout as default,
