@@ -1,5 +1,5 @@
-import { c as create_ssr_component, b as add_attribute, e as escape, v as validate_component, d as each } from "../../_app/immutable/chunks/index-27acdd93.js";
-import { R as ReadMoreTag } from "../../_app/immutable/chunks/ReadMoreTag-2fe9df27.js";
+import { c as create_ssr_component, a as add_attribute, e as escape, v as validate_component, b as each } from "../../_app/immutable/chunks/index-511472e1.js";
+import { R as ReadMoreTag } from "../../_app/immutable/chunks/ReadMoreTag-72af3152.js";
 const Card_svelte_svelte_type_style_lang = "";
 const css$3 = {
   code: ".card.svelte-1y41kh8.svelte-1y41kh8{display:flex;justify-content:center;flex-flow:row wrap;max-width:400px;border:5px solid var(--dark-text);box-shadow:10px 10px var(--secondary);border-radius:5px;margin-bottom:2rem}.post-title.svelte-1y41kh8 a.svelte-1y41kh8{color:var(--dark-text)}.post-title.svelte-1y41kh8 a.svelte-1y41kh8:hover{color:var(--primary)}.post-cover.svelte-1y41kh8.svelte-1y41kh8{object-fit:cover;width:500px;height:200px}.card-content.svelte-1y41kh8.svelte-1y41kh8{padding:1em}img.svelte-1y41kh8.svelte-1y41kh8:hover{filter:hue-rotate(-150deg);clip-path:polygon(\n    50% 0%,\n    94% 2%,\n    96% 18%,\n    100% 70%,\n    95% 98%,\n    50% 100%,\n    24% 98%,\n    3% 95%,\n    2% 34%,\n    14% 5%\n  )}",
@@ -136,24 +136,34 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `${$$result.head += `${$$result.title = `<title>GirlsLikeGirls</title>`, ""}`, ""}
 
-<main>${validate_component(FeaturedPost, "FeaturedPost").$$render($$result, {
-    path: posts[0].path,
-    title: posts[0].meta.title,
-    alt: posts[0].meta.alt,
-    cover: posts[0].meta.cover,
-    category: posts[0].meta.category,
-    date: new Date(posts[0].meta.date).toDateString()
-  }, {}, {})}
+<main>${validate_component(FeaturedPost, "FeaturedPost").$$render(
+    $$result,
+    {
+      path: posts[0].path,
+      title: posts[0].meta.title,
+      alt: posts[0].meta.alt,
+      cover: posts[0].meta.cover,
+      category: posts[0].meta.category,
+      date: new Date(posts[0].meta.date).toDateString()
+    },
+    {},
+    {}
+  )}
 	${validate_component(DailyQuote, "DailyQuote").$$render($$result, {}, {}, {})}
 	<section class="${"post-grid svelte-15hqesx"}">${each(posts, (post) => {
-    return `${posts.indexOf(post) !== 0 ? `${validate_component(Card, "Card").$$render($$result, {
-      source: post.meta.cover,
-      title: post.meta.title,
-      category: post.meta.category,
-      date: post.meta.date,
-      path: post.path,
-      alt: post.meta.alt
-    }, {}, {})}` : ``}`;
+    return `${posts.indexOf(post) !== 0 ? `${validate_component(Card, "Card").$$render(
+      $$result,
+      {
+        source: post.meta.cover,
+        title: post.meta.title,
+        category: post.meta.category,
+        date: post.meta.date,
+        path: post.path,
+        alt: post.meta.alt
+      },
+      {},
+      {}
+    )}` : ``}`;
   })}</section>
 </main>`;
 });

@@ -3,6 +3,8 @@ import root from '__GENERATED__/root.svelte';
 import { respond } from '../runtime/server/index.js';
 import { set_paths, assets, base } from '../runtime/paths.js';
 import { set_prerendering } from '../runtime/env.js';
+import { set_private_env } from '../runtime/env-private.js';
+import { set_public_env } from '../runtime/env-public.js';
 
 const template = ({ head, body, assets, nonce }) => "<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"" + assets + "/favicon.png\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\t\t" + head + "\n\t</head>\n\t<body>\n\t\t<div>" + body + "</div>\n\t</body>\n</html>\n";
 
@@ -50,6 +52,7 @@ export class Server {
 				default: true,
 				enabled: true
 			},
+			public_env: {},
 			read,
 			root,
 			service_worker: null,
@@ -58,6 +61,19 @@ export class Server {
 			template_contains_nonce: false,
 			trailing_slash: "never"
 		};
+	}
+
+	init({ env }) {
+		const entries = Object.entries(env);
+
+		const prv = Object.fromEntries(Object.entries(env).filter(([k]) => !k.startsWith('PUBLIC_')));
+
+		const pub = Object.fromEntries(Object.entries(env).filter(([k]) => k.startsWith('PUBLIC_')));
+
+		set_private_env(prv);
+		set_public_env(pub);
+
+		this.options.public_env = pub;
 	}
 
 	async respond(request, options = {}) {

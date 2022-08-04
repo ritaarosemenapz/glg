@@ -1,6 +1,7 @@
 <script context="module">
 	import '../styles/global.css';
 	import Header from 'src/components/Header.svelte';
+	import Footer from 'src/components/Footer.svelte';
 	export async function load({ fetch }) {
 		const POSTS = await fetch('../api/posts.json');
 		const ALL_POSTS = await POSTS.json();
@@ -55,6 +56,7 @@
 	</article>
 </main>
 <footer>
+<Footer />
 </footer>
 
 <style>

@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component } from "../../_app/immutable/chunks/index-27acdd93.js";
+import { c as create_ssr_component, v as validate_component } from "../../_app/immutable/chunks/index-511472e1.js";
 import _layout_article from "./layouts/__layout-article.svelte.js";
 const metadata = {
   "layout": "article",

@@ -16,7 +16,10 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target, mod));
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
@@ -24,7 +27,7 @@ __export(stdin_exports, {
   metadata: () => metadata
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_27acdd93 = require("../../_app/immutable/chunks/index-27acdd93.js");
+var import_index_511472e1 = require("../../_app/immutable/chunks/index-511472e1.js");
 var import_layout_article_svelte = __toESM(require("./layouts/__layout-article.svelte.js"));
 const metadata = {
   "layout": "article",
@@ -36,8 +39,8 @@ const metadata = {
   "photoCredit": 'Photo by <a href="https://unsplash.com/@minusculemarie?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marie-Mich\xE8le Bouchard</a> on <a href="https://unsplash.com/@ritaarosemenapz/likes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>',
   "photoAlt": "PHOTO"
 };
-const Sample = (0, import_index_27acdd93.c)(($$result, $$props, $$bindings, slots) => {
-  return `${(0, import_index_27acdd93.v)(import_layout_article_svelte.default, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata), {}, {
+const Sample = (0, import_index_511472e1.c)(($$result, $$props, $$bindings, slots) => {
+  return `${(0, import_index_511472e1.v)(import_layout_article_svelte.default, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata), {}, {
     default: () => {
       return `<p>asdasdasdasdadasd</p>`;
     }

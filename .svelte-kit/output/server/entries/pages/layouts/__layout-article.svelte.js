@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, g as getContext, a as subscribe, b as add_attribute, v as validate_component } from "../../../_app/immutable/chunks/index-27acdd93.js";
+import { c as create_ssr_component, e as escape, a as add_attribute, v as validate_component } from "../../../_app/immutable/chunks/index-511472e1.js";
 const AUTHOR_INFO = {
   name: "Rita Arosemena-Perez",
   bio: "I write about the things I love",
@@ -22,37 +22,6 @@ const Sidebar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 	<button class="${"support-button svelte-1g4g5f7"}" type="${"button"}" name="${"support"}">\u2615\uFE0F Buy me a coffee</button></aside>
 
 ${slots.default ? slots.default({}) : ``}`;
-});
-const getStores = () => {
-  const stores = getContext("__svelte__");
-  return {
-    page: {
-      subscribe: stores.page.subscribe
-    },
-    navigating: {
-      subscribe: stores.navigating.subscribe
-    },
-    get preloading() {
-      console.error("stores.preloading is deprecated; use stores.navigating instead");
-      return {
-        subscribe: stores.navigating.subscribe
-      };
-    },
-    session: stores.session,
-    updated: stores.updated
-  };
-};
-const page = {
-  subscribe(fn) {
-    const store = getStores().page;
-    return store.subscribe(fn);
-  }
-};
-const SocialShare = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $page, $$unsubscribe_page;
-  $$unsubscribe_page = subscribe(page, (value) => $page = value);
-  $$unsubscribe_page();
-  return `<p>Current URL: ${escape($page.url.path)}</p>`;
 });
 const __layoutArticle_svelte_svelte_type_style_lang = "";
 const css = {
@@ -89,11 +58,15 @@ const _layout_article = create_ssr_component(($$result, $$props, $$bindings, slo
 					<p class="${"post-date svelte-6ry62i"}">${escape(new Date(date).toDateString())}</p></div>
 				<div class="${"col-2 svelte-6ry62i"}"><img${add_attribute("src", cover, 0)}${add_attribute("alt", photoAlt, 0)} class="${"svelte-6ry62i"}">
 					<p class="${"photo-credit svelte-6ry62i"}"><!-- HTML_TAG_START -->${photoCredit}<!-- HTML_TAG_END --></p></div></div></div></section>
-	<aside class="${"svelte-6ry62i"}">${validate_component(SocialShare, "SocialShare").$$render($$result, {}, {}, {})}
-		${validate_component(Sidebar, "Sidebar").$$render($$result, {
-    name: AUTHOR_INFO.name,
-    bio: AUTHOR_INFO.bio
-  }, {}, {})}</aside>
+	<aside class="${"svelte-6ry62i"}">${validate_component(Sidebar, "Sidebar").$$render(
+    $$result,
+    {
+      name: AUTHOR_INFO.name,
+      bio: AUTHOR_INFO.bio
+    },
+    {},
+    {}
+  )}</aside>
 	<article class="${"post-body svelte-6ry62i"}">${slots.default ? slots.default({}) : ``}</article>
 </div>`;
 });

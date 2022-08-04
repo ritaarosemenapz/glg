@@ -16,7 +16,10 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target, mod));
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
@@ -26,14 +29,16 @@ module.exports = __toCommonJS(stdin_exports);
 async function GET() {
   const ALL_POSTS = Object.assign({ "../comes-the-sun.md": () => Promise.resolve().then(() => __toESM(require("../../pages/comes-the-sun.md.js"))), "../sample.md": () => Promise.resolve().then(() => __toESM(require("../../pages/sample.md.js"))) });
   const ITERABLE_FILES = Object.entries(ALL_POSTS);
-  const POSTS = await Promise.all(ITERABLE_FILES.map(async ([path, resolver]) => {
-    const { metadata } = await resolver();
-    const postpath = path.slice(2, -3);
-    return {
-      meta: metadata,
-      path: postpath
-    };
-  }));
+  const POSTS = await Promise.all(
+    ITERABLE_FILES.map(async ([path, resolver]) => {
+      const { metadata } = await resolver();
+      const postpath = path.slice(2, -3);
+      return {
+        meta: metadata,
+        path: postpath
+      };
+    })
+  );
   const SORTED_POSTS = POSTS.sort((a, b) => {
     return new Date(b.meta.date) - new Date(a.meta.date);
   });
