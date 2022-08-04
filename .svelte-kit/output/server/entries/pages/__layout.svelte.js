@@ -27,14 +27,14 @@ const MobileMenu = create_ssr_component(($$result, $$props, $$bindings, slots) =
 });
 const Header_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".container.svelte-2fjz98.svelte-2fjz98{justify-content:space-between;flex-direction:column}.container.svelte-2fjz98.svelte-2fjz98{margin-left:0.5em}.top-container.svelte-2fjz98.svelte-2fjz98{display:flex;flex-flow:row wrap;align-items:center;justify-content:flex-start}.menu-large-screens.svelte-2fjz98.svelte-2fjz98{margin-right:1em}.menu-large-screens.svelte-2fjz98 li.svelte-2fjz98{display:flex;flex-flow:row wrap;list-style:none;font-family:var(--font-body);gap:0.7em;font-weight:bold}ul.svelte-2fjz98.svelte-2fjz98{padding:0;margin:0}.site-title.svelte-2fjz98.svelte-2fjz98{text-decoration:none;margin:0 1em 0 0;font-family:'Snowman'}@media(max-width: 700px){.top-container.svelte-2fjz98.svelte-2fjz98{justify-content:center}.menu-large-screens.svelte-2fjz98.svelte-2fjz98{display:none}}",
+  code: ".container.svelte-hnbayq.svelte-hnbayq{justify-content:space-between;flex-direction:column}.container.svelte-hnbayq.svelte-hnbayq{margin-left:0.5em}.top-container.svelte-hnbayq.svelte-hnbayq{display:flex;flex-flow:row wrap;align-items:center;justify-content:flex-start}.menu-large-screens.svelte-hnbayq.svelte-hnbayq{margin-right:1em}.menu-large-screens.svelte-hnbayq li.svelte-hnbayq{display:flex;flex-flow:row wrap;list-style:none;font-family:var(--font-body);gap:0.7em;font-weight:bold}ul.svelte-hnbayq.svelte-hnbayq{padding:0;margin:0}.site-title.svelte-hnbayq.svelte-hnbayq{text-decoration:none;margin:0 1em 0 0;font-family:'Snowman'}@media(max-width: 700px){.top-container.svelte-hnbayq.svelte-hnbayq{justify-content:center}.menu-large-screens.svelte-hnbayq.svelte-hnbayq{display:none}}",
   map: null
 };
 const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
   return `${validate_component(MobileMenu, "MobileMenu").$$render($$result, {}, {}, {})}
-<div class="${"container svelte-2fjz98"}"><div class="${"top-container svelte-2fjz98"}"><h1 class="${"site-title svelte-2fjz98"}"><a href="${"/"}">GIRLPOWER</a></h1>
-		<nav class="${"menu-large-screens svelte-2fjz98"}"><ul class="${"svelte-2fjz98"}"><li class="${"svelte-2fjz98"}"><a href="${"dating"}">Dating</a>
+<div class="${"container svelte-hnbayq"}"><div class="${"top-container svelte-hnbayq"}"><h1 class="${"site-title svelte-hnbayq"}"><a href="${"/"}">GIRLPOWER</a></h1>
+		<nav class="${"menu-large-screens svelte-hnbayq"}"><ul class="${"svelte-hnbayq"}"><li class="${"svelte-hnbayq"}"><a href="${"dating"}">Dating</a>
 					<a href="${"movies"}">Movies</a>
 					<a href="${"tv"}">TV</a>
 					<a href="${"relationships"}">Relationships</a></li></ul></nav></div>
@@ -47,7 +47,7 @@ const css = {
   map: null
 };
 async function load({ fetch }) {
-  const POSTS = await fetch("../api/posts.json");
+  const POSTS = await fetch("./api/posts.json");
   const ALL_POSTS = await POSTS.json();
   return { props: { posts: ALL_POSTS } };
 }
