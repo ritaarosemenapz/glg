@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape } from "../../_app/immutable/chunks/index-511472e1.js";
+import { c as create_ssr_component, e as escape } from "../../_app/immutable/chunks/index-27acdd93.js";
 function load({ error, status }) {
   return { props: { error, status } };
 }

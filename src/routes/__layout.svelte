@@ -65,10 +65,6 @@
 		background-color: var(--secondary);
 	}
 
-	.close-search-box {
-		cursor: pointer;
-	}
-
 	input {
 		width: 100%;
 	}

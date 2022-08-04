@@ -28,7 +28,7 @@
 	<FeaturedPost
 		path={posts[0].path}
 		title={posts[0].meta.title}
-		summary={posts[0].meta.summary}
+		alt={posts[0].meta.alt}
 		cover={posts[0].meta.cover}
 		category={posts[0].meta.category}
 		date={new Date(posts[0].meta.date).toDateString()}

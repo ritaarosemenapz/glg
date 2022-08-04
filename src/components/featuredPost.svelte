@@ -9,7 +9,7 @@
 </script>
 
 <section>
-	<img src={cover} {alt} />
+	<img src={cover} alt={alt} />
 	<div class="text-container">
 		<p class="category-badge">{category}</p>
 		<h2 class="post-title"><a href={path}>{title}</a></h2>

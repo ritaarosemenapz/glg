@@ -3,15 +3,13 @@ export const manifest = {
 	assets: new Set(["favicon.png"]),
 	mimeTypes: {".png":"image/png"},
 	_: {
-		entry: {"file":"_app/immutable/start-9991dfe2.js","imports":["_app/immutable/start-9991dfe2.js","_app/immutable/chunks/index-d750e342.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-5693baac.js","imports":["_app/immutable/start-5693baac.js","_app/immutable/chunks/index-43d79fe5.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
-			() => import('./nodes/6.js'),
-			() => import('./nodes/4.js'),
 			() => import('./nodes/5.js'),
-			() => import('./nodes/7.js'),
-			() => import('./nodes/8.js'),
+			() => import('./nodes/4.js'),
+			() => import('./nodes/6.js'),
 			() => import('./nodes/3.js')
 		],
 		routes: [
@@ -39,35 +37,13 @@ export const manifest = {
 			},
 			{
 				type: 'page',
-				id: "i-need-to-move",
-				pattern: /^\/i-need-to-move\/?$/,
+				id: "sample",
+				pattern: /^\/sample\/?$/,
 				names: [],
 				types: [],
-				path: "/i-need-to-move",
+				path: "/sample",
 				shadow: null,
 				a: [0,4],
-				b: [1]
-			},
-			{
-				type: 'page',
-				id: "movies-you-have-to-watch",
-				pattern: /^\/movies-you-have-to-watch\/?$/,
-				names: [],
-				types: [],
-				path: "/movies-you-have-to-watch",
-				shadow: null,
-				a: [0,5],
-				b: [1]
-			},
-			{
-				type: 'page',
-				id: "why-i-love-women",
-				pattern: /^\/why-i-love-women\/?$/,
-				names: [],
-				types: [],
-				path: "/why-i-love-women",
-				shadow: null,
-				a: [0,6],
 				b: [1]
 			},
 			{
@@ -86,7 +62,7 @@ export const manifest = {
 				types: [null],
 				path: null,
 				shadow: null,
-				a: [0,7],
+				a: [0,5],
 				b: [1]
 			}
 		],

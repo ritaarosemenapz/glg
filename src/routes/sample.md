@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "X Things You Need to Stop Asking Permission For"
-cover: "src/routes/images/marie-michele-bouchard-mDnsigCx9R4-unsplash.jpg"
+cover: "https://images.unsplash.com/photo-1659394754299-26e8172a1d79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
 category: "tv"
 date: "2022-12-10"
 summary: "Just stop."

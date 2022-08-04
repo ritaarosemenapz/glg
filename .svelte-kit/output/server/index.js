@@ -1,4 +1,4 @@
-import { c as create_ssr_component, s as setContext, v as validate_component, m as missing_component } from "./_app/immutable/chunks/index-511472e1.js";
+import { c as create_ssr_component, s as setContext, v as validate_component, m as missing_component } from "./_app/immutable/chunks/index-27acdd93.js";
 function afterUpdate() {
 }
 const Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -2138,7 +2138,7 @@ async function respond(request, options, state) {
   const event = {
     get clientAddress() {
       if (!state.getClientAddress) {
-        throw new Error(`${"@sveltejs/adapter-static"} does not specify getClientAddress. Please raise an issue`);
+        throw new Error(`${"@sveltejs/adapter-netlify"} does not specify getClientAddress. Please raise an issue`);
       }
       Object.defineProperty(event, "clientAddress", {
         value: state.getClientAddress()

@@ -1,14 +1,14 @@
-import { c as create_ssr_component, v as validate_component } from "../../_app/immutable/chunks/index-511472e1.js";
+import { c as create_ssr_component, v as validate_component } from "../../_app/immutable/chunks/index-27acdd93.js";
 import _layout_article from "./layouts/__layout-article.svelte.js";
 const metadata = {
   "layout": "article",
-  "title": "This is the latest",
-  "cover": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
+  "title": "Dating a girl for the first time?",
+  "cover": "https://images.unsplash.com/photo-1659394754299-26e8172a1d79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80",
   "category": "tv",
   "date": "2022-12-29",
-  "summary": "Here comes the sun",
-  "photoCredit": "https://unsplash.com/@cowomen",
-  "photoAlt": "Photo of woman"
+  "summary": "Just stop.",
+  "photoCredit": 'Photo by <a href="https://unsplash.com/@minusculemarie?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marie-Mich\xE8le Bouchard</a> on <a href="https://unsplash.com/@ritaarosemenapz/likes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>',
+  "photoAlt": "PHOTO"
 };
 const Comes_the_sun = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(_layout_article, "Layout_MDSVEX_DEFAULT").$$render($$result, Object.assign($$props, metadata), {}, {

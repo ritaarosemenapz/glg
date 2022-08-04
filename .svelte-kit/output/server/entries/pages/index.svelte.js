@@ -1,4 +1,37 @@
-import { c as create_ssr_component, e as escape, a as add_attribute, v as validate_component, b as each } from "../../_app/immutable/chunks/index-511472e1.js";
+import { c as create_ssr_component, b as add_attribute, e as escape, v as validate_component, d as each } from "../../_app/immutable/chunks/index-27acdd93.js";
+import { R as ReadMoreTag } from "../../_app/immutable/chunks/ReadMoreTag-2fe9df27.js";
+const Card_svelte_svelte_type_style_lang = "";
+const css$3 = {
+  code: ".card.svelte-1y41kh8.svelte-1y41kh8{display:flex;justify-content:center;flex-flow:row wrap;max-width:400px;border:5px solid var(--dark-text);box-shadow:10px 10px var(--secondary);border-radius:5px;margin-bottom:2rem}.post-title.svelte-1y41kh8 a.svelte-1y41kh8{color:var(--dark-text)}.post-title.svelte-1y41kh8 a.svelte-1y41kh8:hover{color:var(--primary)}.post-cover.svelte-1y41kh8.svelte-1y41kh8{object-fit:cover;width:500px;height:200px}.card-content.svelte-1y41kh8.svelte-1y41kh8{padding:1em}img.svelte-1y41kh8.svelte-1y41kh8:hover{filter:hue-rotate(-150deg);clip-path:polygon(\n    50% 0%,\n    94% 2%,\n    96% 18%,\n    100% 70%,\n    95% 98%,\n    50% 100%,\n    24% 98%,\n    3% 95%,\n    2% 34%,\n    14% 5%\n  )}",
+  map: null
+};
+const Card = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { source } = $$props;
+  let { title } = $$props;
+  let { category } = $$props;
+  let { date } = $$props;
+  let { path } = $$props;
+  let { alt } = $$props;
+  if ($$props.source === void 0 && $$bindings.source && source !== void 0)
+    $$bindings.source(source);
+  if ($$props.title === void 0 && $$bindings.title && title !== void 0)
+    $$bindings.title(title);
+  if ($$props.category === void 0 && $$bindings.category && category !== void 0)
+    $$bindings.category(category);
+  if ($$props.date === void 0 && $$bindings.date && date !== void 0)
+    $$bindings.date(date);
+  if ($$props.path === void 0 && $$bindings.path && path !== void 0)
+    $$bindings.path(path);
+  if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0)
+    $$bindings.alt(alt);
+  $$result.css.add(css$3);
+  return `<article class="${"card svelte-1y41kh8"}"><img class="${"post-cover svelte-1y41kh8"}"${add_attribute("src", source, 0)}${add_attribute("alt", alt, 0)}>
+  <div class="${"card-content svelte-1y41kh8"}"><a class="${"category-badge"}"${add_attribute("href", category.toLowerCase(), 0)}>${escape(category)}</a>
+    <h3 class="${"post-title svelte-1y41kh8"}"><a${add_attribute("href", path, 0)} class="${"svelte-1y41kh8"}">${escape(title)}</a></h3>
+    <p class="${"post-date"}">${escape(new Date(date).toDateString())}</p>
+    ${validate_component(ReadMoreTag, "ReadMoreTag").$$render($$result, { path }, {}, {})}</div>
+</article>`;
+});
 const FEM_QUOTES = [
   {
     "text": "You educate a man; you educate a man. You educate a woman; you educate a generation.",
@@ -43,38 +76,31 @@ const FEM_QUOTES = [
 ];
 const DailyQuote_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: "blockquote.svelte-c7b0d6.svelte-c7b0d6{font-family:Arial, Helvetica, sans-serif;background:-webkit-linear-gradient(#3f5efb, #fc466b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0;padding:1em}section.svelte-c7b0d6.svelte-c7b0d6{align-items:center}.social-icons.svelte-c7b0d6.svelte-c7b0d6{padding:0 1em}.social-icons.svelte-c7b0d6 ul.svelte-c7b0d6{padding:0;margin:0;display:flex;justify-content:flex-end}.social-icons.svelte-c7b0d6 li.svelte-c7b0d6{list-style:none;border-bottom:3px solid var(--dark-text)}",
+  code: '.container.svelte-jya1kz{display:flex;flex-direction:column}.daily-quote.svelte-jya1kz{margin:0;padding:1em 2em;font-family:"Arial";font-weight:bold;color:white;font-size:1.8rem}.author.svelte-jya1kz{color:var(--secondary)}section.svelte-jya1kz{align-items:center;background-color:var(--dark-text);padding:0}',
   map: null
 };
 const DailyQuote = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let randomIndex = Math.floor(Math.random() * FEM_QUOTES.length);
   let randomQuote = FEM_QUOTES[randomIndex];
-  const TWITTER_ICON = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><path fill="#2F88FF" stroke="#000" stroke-linejoin="round" stroke-width="4" d="M5 35.7622C6.92886 36.8286 20.8914 44.8773 30.8199 38.674C40.7483 32.4707 40.2006 21.7833 40.2006 16.886C41.1 15.0018 43 14.0439 43 8.9438C41.1337 10.6678 39.2787 11.2544 37.435 10.7036C35.6287 7.94957 33.1435 6.73147 29.9794 7.04934C25.2333 7.52614 23.4969 12.1825 24.0079 18.2067C16.6899 21.9074 10.9515 15.524 7.99418 10.7036C7.00607 14.4999 6.0533 19.0576 7.99418 24.0995C9.2881 27.4607 12.3985 30.3024 17.3254 32.6246C12.3323 35.3308 8.22382 36.3766 5 35.7622Z"></path></svg>`;
-  const FACEBOOK_ICON = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><path fill="#2F88FF" stroke="#000" stroke-linejoin="round" stroke-width="3.8" d="M36 12.5997H31.2489H29.9871C28.9009 12.5997 28.0203 13.4803 28.0203 14.5666V21.4674H36L34.8313 29.0643H28.0203V43H19.2451V29.0643H12V21.4674H19.1515L19.2451 14.2563L19.2318 12.9471C19.1879 8.60218 22.6745 5.04434 27.0194 5.0004C27.0459 5.00013 27.0724 5 27.0989 5H36V12.5997Z"></path></svg>`;
-  const TUMBLR_ICON = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><g fill="none"><path fill="#2F88FF" stroke="#000" stroke-width="4" d="M39 6H9C7.34315 6 6 7.34315 6 9V39C6 40.6569 7.34315 42 9 42H39C40.6569 42 42 40.6569 42 39V9C42 7.34315 40.6569 6 39 6Z"></path><path fill="#fff" d="M15 22V17H20V14L26 12V17H31V22H26V29C26 29 26 30.5 28 31C30 31.5 33 30 33 30L31 36H26C22.5 36 20 32.5 20 30V22H15Z"></path></g></svg>`;
   $$result.css.add(css$2);
-  return `<section class="${"svelte-c7b0d6"}"><blockquote class="${"svelte-c7b0d6"}">${randomQuote ? `&quot;${escape(randomQuote.text)}&quot; - ${escape(randomQuote.author)}` : `<p>&quot;Women are strong as hell.&quot;</p>`}</blockquote>
-	<div class="${"social-icons svelte-c7b0d6"}"><ul class="${"svelte-c7b0d6"}"><li class="${"svelte-c7b0d6"}"><a href="${""}"><!-- HTML_TAG_START -->${TWITTER_ICON}<!-- HTML_TAG_END --></a></li>
-			<li class="${"svelte-c7b0d6"}"><a href="${""}"><!-- HTML_TAG_START -->${FACEBOOK_ICON}<!-- HTML_TAG_END --></a></li>
-			<li class="${"svelte-c7b0d6"}"><a href="${""}"><!-- HTML_TAG_START -->${TUMBLR_ICON}<!-- HTML_TAG_END --></a></li></ul></div>
+  return `<section class="${"container svelte-jya1kz"}">${randomQuote ? `<blockquote class="${"daily-quote svelte-jya1kz"}"><p>&quot;${escape(randomQuote.text)}&quot;</p>
+			<p class="${"author svelte-jya1kz"}">\u2013 ${escape(randomQuote.author)}</p></blockquote>` : `<blockquote>&quot;Women are strong as hell.&quot;</blockquote>`}
 </section>`;
 });
 const FeaturedPost_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "section.svelte-x5hosu{display:grid;background-color:var(--primary);grid-template-columns:auto auto;justify-content:space-between;align-items:center;column-gap:2em}img.svelte-x5hosu{order:1;width:500px;height:500px;object-fit:cover}.category-badge.svelte-x5hosu{color:white}.text-container.svelte-x5hosu{margin-left:2em;color:white}.post-title.svelte-x5hosu{font-size:2rem;font-family:var(--font-headings);color:white}a.svelte-x5hosu{color:white}a.svelte-x5hosu:hover{color:var(--dark-text)}@media(max-width: 789px){img.svelte-x5hosu{width:400px;height:400px}}",
+  code: "section.svelte-8s3qpb.svelte-8s3qpb{display:grid;grid-template-columns:auto auto;justify-content:space-between;background-color:var(--secondary);align-items:center;column-gap:2em}img.svelte-8s3qpb.svelte-8s3qpb{order:1;width:500px;height:500px;object-fit:cover}.text-container.svelte-8s3qpb.svelte-8s3qpb{margin-left:2em;max-width:800px}.post-title.svelte-8s3qpb a.svelte-8s3qpb{font-family:var(--font-headings)}.post-title.svelte-8s3qpb a.svelte-8s3qpb:hover{color:var(--dark-text)}@media(max-width: 789px){img.svelte-8s3qpb.svelte-8s3qpb{width:400px;height:400px}}",
   map: null
 };
 const FeaturedPost = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { title } = $$props;
-  let { summary } = $$props;
   let { cover } = $$props;
   let { category } = $$props;
   let { path } = $$props;
   let { date } = $$props;
+  let { alt } = $$props;
   if ($$props.title === void 0 && $$bindings.title && title !== void 0)
     $$bindings.title(title);
-  if ($$props.summary === void 0 && $$bindings.summary && summary !== void 0)
-    $$bindings.summary(summary);
   if ($$props.cover === void 0 && $$bindings.cover && cover !== void 0)
     $$bindings.cover(cover);
   if ($$props.category === void 0 && $$bindings.category && category !== void 0)
@@ -83,20 +109,19 @@ const FeaturedPost = create_ssr_component(($$result, $$props, $$bindings, slots)
     $$bindings.path(path);
   if ($$props.date === void 0 && $$bindings.date && date !== void 0)
     $$bindings.date(date);
+  if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0)
+    $$bindings.alt(alt);
   $$result.css.add(css$1);
-  return `<section class="${"svelte-x5hosu"}">
-	<img${add_attribute("src", cover, 0)} alt="${"#"}" class="${"svelte-x5hosu"}">
-	
-	<div class="${"text-container svelte-x5hosu"}"><p class="${"category-badge svelte-x5hosu"}">${escape(category)}</p>
-		<a class="${"post-title svelte-x5hosu"}"${add_attribute("href", path, 0)}>${escape(title)}</a>
-		<p class="${"post-summary"}">${escape(summary)}</p>
-		<p>${escape(date)}</p>
-		<a class="${"read-more-tag svelte-x5hosu"}"${add_attribute("href", path, 0)}>Read More</a></div>
+  return `<section class="${"svelte-8s3qpb"}"><img${add_attribute("src", cover, 0)}${add_attribute("alt", alt, 0)} class="${"svelte-8s3qpb"}">
+	<div class="${"text-container svelte-8s3qpb"}"><p class="${"category-badge"}">${escape(category)}</p>
+		<h2 class="${"post-title svelte-8s3qpb"}"><a${add_attribute("href", path, 0)} class="${"svelte-8s3qpb"}">${escape(title)}</a></h2>
+		<p class="${"post-date"}">${escape(date)}</p>
+		${validate_component(ReadMoreTag, "ReadMoreTag").$$render($$result, { path }, {}, {})}</div>
 </section>`;
 });
 const index_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".post-grid.svelte-lrgik1{display:grid;grid-template-columns:repeat(auto-fit, minmax(352px, 1fr));justify-items:center;column-gap:2em;align-items:stretch}article.svelte-lrgik1{display:flex;flex-direction:column;justify-content:baseline;align-items:flex-start;width:400px;gap:2em;margin:2em;padding:1em;border-left:4px solid black}span.svelte-lrgik1{padding:1em;margin:0}h2.svelte-lrgik1{text-transform:uppercase;margin:0}a.svelte-lrgik1{text-transform:uppercase}img.svelte-lrgik1:hover{filter:hue-rotate(-150deg);clip-path:polygon(\n			50% 0%,\n			94% 2%,\n			96% 18%,\n			100% 70%,\n			95% 98%,\n			50% 100%,\n			24% 98%,\n			3% 95%,\n			2% 34%,\n			14% 5%\n		)}.quote.svelte-lrgik1{padding:2em}",
+  code: ".post-grid.svelte-15hqesx{display:grid;grid-template-columns:repeat(auto-fit, minmax(352px, 1fr));justify-items:center;column-gap:2em;padding:1em\n	}",
   map: null
 };
 async function load({ fetch }) {
@@ -114,20 +139,21 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 <main>${validate_component(FeaturedPost, "FeaturedPost").$$render($$result, {
     path: posts[0].path,
     title: posts[0].meta.title,
-    summary: posts[0].meta.summary,
+    alt: posts[0].meta.alt,
     cover: posts[0].meta.cover,
     category: posts[0].meta.category,
     date: new Date(posts[0].meta.date).toDateString()
   }, {}, {})}
-	<section class="${"quote svelte-lrgik1"}">${validate_component(DailyQuote, "DailyQuote").$$render($$result, {}, {}, {})}</section>
-	<section class="${"post-grid svelte-lrgik1"}">${each(posts, (post) => {
-    return `${posts.indexOf(post) !== 0 ? `<article class="${"svelte-lrgik1"}"><img${add_attribute("src", post.meta.cover, 0)}${add_attribute("alt", post.title, 0)} class="${"svelte-lrgik1"}">
-					<span class="${"svelte-lrgik1"}"><div><a class="${"category-badge svelte-lrgik1"}"${add_attribute("href", `${post.meta.category.toLowerCase()}`, 0)}>${escape(post.meta.category)}
-							</a></div>
-						<h2 class="${"svelte-lrgik1"}">${escape(post.meta.title)}</h2>
-						<p>${escape(new Date(post.meta.date).toDateString())}</p>
-						<a class="${"read-more-tag svelte-lrgik1"}"${add_attribute("href", post.path, 0)}>Read More</a></span>
-				</article>` : ``}`;
+	${validate_component(DailyQuote, "DailyQuote").$$render($$result, {}, {}, {})}
+	<section class="${"post-grid svelte-15hqesx"}">${each(posts, (post) => {
+    return `${posts.indexOf(post) !== 0 ? `${validate_component(Card, "Card").$$render($$result, {
+      source: post.meta.cover,
+      title: post.meta.title,
+      category: post.meta.category,
+      date: post.meta.date,
+      path: post.path,
+      alt: post.meta.alt
+    }, {}, {})}` : ``}`;
   })}</section>
 </main>`;
 });

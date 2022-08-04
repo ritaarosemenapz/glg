@@ -10,7 +10,7 @@ export async function GET() {
       path: postpath
     }
   })
-  
+
 )
 
 const SORTED_POSTS = POSTS.sort((a, b) => {
@@ -22,5 +22,3 @@ const SORTED_POSTS = POSTS.sort((a, b) => {
   }
 
 }
-
-
