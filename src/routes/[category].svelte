@@ -1,6 +1,6 @@
 <script context="module">
-	import { fade } from "svelte/transition";
-	import ReadMoreTag from "src/components/ReadMoreTag.svelte";
+	import { fade } from 'svelte/transition';
+	import ReadMoreTag from '../components/ReadMoreTag.svelte';
 	export const load = async ({ fetch, params }) => {
 		const RESPONSE = await fetch('api/posts.json');
 		const POSTS = await RESPONSE.json();

@@ -1,8 +1,8 @@
 <script context="module">
-	import FeaturedPost from 'src/components/FeaturedPost.svelte';
-	import DailyQuote from 'src/components/DailyQuote.svelte';
+	import FeaturedPost from '../components/FeaturedPost.svelte';
+	import DailyQuote from '../components/DailyQuote.svelte';
 	import { fade } from 'svelte/transition';
-	import Card from 'src/components/Card.svelte'
+	import Card from '../components/Card.svelte';
 
 	export async function load({ fetch }) {
 		const POSTS = await fetch('./api/posts.json');
@@ -37,8 +37,14 @@
 	<section class="post-grid">
 		{#each posts as post}
 			{#if posts.indexOf(post) !== 0}
-			<Card source={post.meta.cover} title={post.meta.title} category={post.meta.category}
-			date={post.meta.date} path={post.path} alt={post.meta.alt} />
+				<Card
+					source={post.meta.cover}
+					title={post.meta.title}
+					category={post.meta.category}
+					date={post.meta.date}
+					path={post.path}
+					alt={post.meta.alt}
+				/>
 			{/if}
 		{/each}
 	</section>
@@ -50,6 +56,6 @@
 		grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
 		justify-items: center;
 		column-gap: 2em;
-		padding: 1em
+		padding: 1em;
 	}
 </style>

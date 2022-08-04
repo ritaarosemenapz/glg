@@ -5,16 +5,16 @@
 	export let path;
 	export let date;
 	export let alt;
-	import ReadMoreTag from "src/components/ReadMoreTag.svelte"
+	import ReadMoreTag from './ReadMoreTag.svelte';
 </script>
 
 <section>
-	<img src={cover} alt={alt} />
+	<img src={cover} {alt} />
 	<div class="text-container">
 		<p class="category-badge">{category}</p>
 		<h2 class="post-title"><a href={path}>{title}</a></h2>
 		<p class="post-date">{date}</p>
-		<ReadMoreTag path={path} />
+		<ReadMoreTag {path} />
 	</div>
 </section>
 

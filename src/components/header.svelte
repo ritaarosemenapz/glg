@@ -1,8 +1,6 @@
-
 <script>
-	import MobileMenu from "src/components/mobileMenu.svelte"
+	import MobileMenu from './mobileMenu.svelte';
 </script>
-
 
 <MobileMenu />
 <div class="container">
@@ -63,13 +61,11 @@
 	}
 
 	@media (max-width: 700px) {
-	.top-container {
-		justify-content: center;
+		.top-container {
+			justify-content: center;
+		}
+		.menu-large-screens {
+			display: none;
+		}
 	}
-	.menu-large-screens {
-		display: none;
-	}
-
-	}
-
 </style>

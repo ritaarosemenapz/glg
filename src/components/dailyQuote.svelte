@@ -20,15 +20,15 @@
 </section>
 
 <style>
-.container {
-	display: flex;
-	flex-direction: column;
-}
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
 
 	.daily-quote {
 		margin: 0;
 		padding: 1em 2em;
-		font-family: "Arial";
+		font-family: 'Arial';
 		font-weight: bold;
 		color: white;
 		font-size: 1.8rem;
