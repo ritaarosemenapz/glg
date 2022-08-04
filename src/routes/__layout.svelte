@@ -54,8 +54,10 @@
 	<article id="body">
 		<slot />
 	</article>
-	<Footer />
 </main>
+<footer>
+<Footer />
+</footer>
 
 <style>
 	header {
