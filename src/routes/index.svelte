@@ -1,5 +1,5 @@
 <script context="module">
-	import FeaturedPost from '../components/FeaturedPost.svelte';
+	import FeaturedPost from 'src/components/FeaturedPost.svelte';
 	import DailyQuote from 'src/components/DailyQuote.svelte';
 	import { fade } from 'svelte/transition';
 	import Card from 'src/components/Card.svelte'
