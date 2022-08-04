@@ -1,16 +1,4 @@
 {
-  "src/styles/fonts/DrukWide.ttf": {
-    "file": "_app/immutable/assets/DrukWide-9d00be8d.ttf",
-    "src": "src/styles/fonts/DrukWide.ttf"
-  },
-  "src/styles/fonts/Milkista.ttf": {
-    "file": "_app/immutable/assets/Milkista-5556054e.ttf",
-    "src": "src/styles/fonts/Milkista.ttf"
-  },
-  "src/styles/fonts/Neutra.ttf": {
-    "file": "_app/immutable/assets/Neutra-342f825c.ttf",
-    "src": "src/styles/fonts/Neutra.ttf"
-  },
   "src/styles/fonts/DrukBold.ttf": {
     "file": "_app/immutable/assets/DrukBold-2f17993f.ttf",
     "src": "src/styles/fonts/DrukBold.ttf"
@@ -19,8 +7,20 @@
     "file": "_app/immutable/assets/Snowman-4ac981d4.ttf",
     "src": "src/styles/fonts/Snowman.ttf"
   },
+  "src/styles/fonts/Milkista.ttf": {
+    "file": "_app/immutable/assets/Milkista-5556054e.ttf",
+    "src": "src/styles/fonts/Milkista.ttf"
+  },
+  "src/styles/fonts/DrukWide.ttf": {
+    "file": "_app/immutable/assets/DrukWide-9d00be8d.ttf",
+    "src": "src/styles/fonts/DrukWide.ttf"
+  },
+  "src/styles/fonts/Neutra.ttf": {
+    "file": "_app/immutable/assets/Neutra-342f825c.ttf",
+    "src": "src/styles/fonts/Neutra.ttf"
+  },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-5693baac.js",
+    "file": "_app/immutable/start-46b8c6fc.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -158,12 +158,12 @@
     "file": "_app/immutable/assets/ReadMoreTag-04637e3a.css",
     "src": "ReadMoreTag.css"
   },
-  "src/routes/__layout.css": {
-    "file": "_app/immutable/assets/__layout-7ff7c84e.css",
-    "src": "src/routes/__layout.css"
-  },
   "src/routes/index.css": {
     "file": "_app/immutable/assets/index-11695647.css",
     "src": "src/routes/index.css"
+  },
+  "src/routes/__layout.css": {
+    "file": "_app/immutable/assets/__layout-7ff7c84e.css",
+    "src": "src/routes/__layout.css"
   }
 }

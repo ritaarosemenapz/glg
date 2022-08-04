@@ -33,7 +33,6 @@
 		</div>
 	</section>
 	<aside>
-		<SocialShare />
 		<Sidebar name={AUTHOR_INFO.name} bio={AUTHOR_INFO.bio} />
 	</aside>
 	<article class="post-body">
