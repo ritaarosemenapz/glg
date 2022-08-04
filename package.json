@@ -1,6 +1,6 @@
 {
 	"name": "svelte",
-	"version": "0.0.1",
+	"version": "3.40.1",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -14,8 +14,6 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
-		"@graphcms/management": "^1.6.1",
-		"@playwright/test": "^1.22.2",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-netlify": "^1.0.0-next.71",
 		"@sveltejs/adapter-static": "^1.0.0-next.38",
