@@ -1,37 +1,53 @@
 {
-	"name": "svelte",
-	"version": "3.40.1",
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"package": "svelte-kit package",
-		"preview": "vite preview",
-		"prepare": "svelte-kit sync",
-		"check": "svelte-check --tsconfig ./jsconfig.json",
-		"check:watch": "svelte-check --tsconfig ./jsconfig.json --watch",
-		"test": "playwright test",
-		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
-		"format": "prettier --write --plugin-search-dir=. ."
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-netlify": "^1.0.0-next.71",
-		"@sveltejs/adapter-static": "^1.0.0-next.38",
-		"@sveltejs/kit": "next",
-		"eslint": "^8.16.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-svelte3": "^4.0.0",
-		"mdsvex": "^0.10.6",
-		"prettier": "^2.6.2",
-		"prettier-plugin-svelte": "^2.7.0",
-		"svelte": "^3.44.0",
-		"svelte-check": "^2.7.1",
-		"svelte-quicksearch-bar": "^1.0.5",
-		"typescript": "^4.7.4",
-		"vite": "^3.0.0"
-	},
-	"type": "module",
-	"dependencies": {
-		"svelte-paginate": "^0.0.1"
-	}
+  "name": "svelte",
+  "version": "3.40.1",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "package": "svelte-kit package",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync",
+    "check": "svelte-check --tsconfig ./jsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./jsconfig.json --watch",
+    "test": "playwright test",
+    "lint": "prettier --check --plugin-search-dir=. . && eslint .",
+    "format": "prettier --write --plugin-search-dir=. ."
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-netlify": "^1.0.0-next.71",
+    "@sveltejs/adapter-static": "^1.0.0-next.38",
+    "@sveltejs/kit": "next",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "mdsvex": "^0.10.6",
+    "prettier": "^2.6.2",
+    "prettier-plugin-svelte": "^2.7.0",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.7.1",
+    "svelte-quicksearch-bar": "^1.0.5",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "svelte-paginate": "^0.0.1"
+  },
+  "description": "Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).",
+  "main": "mdsvex.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritaarosemenapz/glg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ritaarosemenapz/glg/issues"
+  },
+  "homepage": "https://github.com/ritaarosemenapz/glg#readme"
 }
